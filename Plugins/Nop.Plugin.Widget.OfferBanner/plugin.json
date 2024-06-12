@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Offer Banner",
+  "SystemName": "Widget.OfferBanner",
+  "Version": "1.0.0",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "nopStation M>N>SAKIB",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widget.OfferBanner.dll",
+  "Description": "This plugin show Offer with a Banner"
+}

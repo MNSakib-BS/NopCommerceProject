@@ -1,0 +1,60 @@
+﻿.employee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the grid */
+  gap: 20px;
+  padding: 20px 0; /* Adjusted padding */
+}
+
+.employee-item {
+  width: calc(33.33% - 20px);
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+  .employee-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.employee-details {
+  padding: 10px;
+}
+
+.employee-name {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.employee-designation {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.status-badges {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  margin-right: 5px;
+}
+
+  .badge img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }

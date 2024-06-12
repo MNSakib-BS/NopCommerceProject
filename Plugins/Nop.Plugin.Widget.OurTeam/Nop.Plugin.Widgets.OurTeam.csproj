@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Copyright>Copyright © Nop Solutions, Ltd</Copyright>
+		<Company>Nop station, Ltd</Company>
+		<Authors>Nop Station, Ltd</Authors>
+		<PackageLicenseUrl></PackageLicenseUrl>
+		<PackageProjectUrl>https://www.nopstation.com/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/nopsstation/nopCommerce</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<OutputPath>..\..\Presentation\Nop.Web\Plugins\Widgets.OurTeam</OutputPath>
+		<OutDir>$(OutputPath)</OutDir>
+		<!--Set this parameter to true to get the dlls copied from the NuGet cache to the output of your project.
+    You need to set this parameter to true if your plugin has a nuget package 
+    to ensure that the dlls copied from the NuGet cache to the output of your project-->
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Content\style.css" />
+    <None Remove="plugin.json" />
+    <None Remove="Views\Employees\List.cshtml" />
+    <None Remove="Views\Shared\Components\TopMenu\Default.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Employees\List.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\Components\TopMenu\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Presentation\Nop.Web\Nop.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\Employees\Create.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\Employees\Edit.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\Employees\_CreateOrUpdate.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\OurTeam\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\_ViewImports.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

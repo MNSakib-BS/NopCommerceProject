@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputPath>..\..\Presentation\Nop.Web\Plugins\Widgets.OfferBanner</OutputPath>
+		<OutDir>$(OutputPath)</OutDir>
+	</PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="plugin.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="plugin.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\OfferBanner\" />
+    <Folder Include="Views\Shared\Components\OfferBanner\" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Presentation\Nop.Web\Nop.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Areas\Admin\Views\OfferBanner\Configure.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Areas\Admin\Views\_ViewImports.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\Shared\Components\OfferBanner\Default.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

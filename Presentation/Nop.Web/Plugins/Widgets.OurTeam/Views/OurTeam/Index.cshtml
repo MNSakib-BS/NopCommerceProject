@@ -1,0 +1,97 @@
+﻿@model IList<Nop.Plugin.Widgets.OurTeam.Models.EmployeeModel>
+
+@* <link rel="stylesheet" href="~/Plugins/Widgets.OurTeam/Content/style.css" />
+@{
+    NopHtml.AppendCssFileParts("~/Plugins/Widgets.OurTeam/Content/style.css");
+} *@
+<div class="employee-container">
+    @foreach (var employee in Model)
+    {
+        <div class="employee-item">
+            <div class="profile-picture">
+                <img src="@employee.PictureThumbnailUrl" alt="Profile Picture">
+            </div>
+            <div class="employee-details">
+                <div class="employee-name"><h3>@employee.Name</h3></div>
+                <div class="employee-designation"><p>@employee.Designation</p></div>
+                <div class="status-badges">
+                    @if (employee.IsMVP)
+                    {
+                        <div class="badge" title="nopCommerce MVP">
+                            <img src="https://www.nop-station.com/images/thumbs/0002602_bigbadge_mvp.png" alt="MVP">
+                        </div>
+                    }
+                    @if (employee.IsNopCommerceCertified)
+                    {
+                        <div class="badge" title="nopCommerce Certified Developer">
+                            <img src="https://www.nop-station.com/images/thumbs/0002603_bigbadge_certifieddev.png" alt="Certified">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .employee-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the grid */
+        gap: 20px;
+        padding: 20px 0; /* Adjusted padding */
+    }
+
+    .employee-item {
+        width: calc(33.33% - 20px);
+        max-width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .employee-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+    .profile-picture img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .employee-details {
+        padding: 10px;
+    }
+
+    .employee-name {
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    .employee-designation {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .status-badges {
+        display: flex;
+        align-items: center;
+    }
+
+    .badge {
+        margin-right: 5px;
+    }
+
+        .badge img {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+        }
+</style>

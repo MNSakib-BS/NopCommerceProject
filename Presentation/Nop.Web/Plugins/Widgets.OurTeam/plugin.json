@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "OurTeam",
+  "SystemName": "Widgets.OurTeam",
+  "Version": "1.0.0",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Nopstation Team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.OurTeam.dll",
+  "Description": "This plugin allows you to add team members FOr testing purpose"
+}
