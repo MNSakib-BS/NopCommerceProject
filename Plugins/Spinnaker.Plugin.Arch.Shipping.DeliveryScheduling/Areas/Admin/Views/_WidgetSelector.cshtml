@@ -1,0 +1,58 @@
+﻿@model Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Areas.Admin.Models.ConfigurationModel
+
+<form asp-area="Admin" asp-controller="DeliveryScheduling" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                @T("Plugins.Arch.DeliveryScheduling.Configuration.WidgetZones")
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-9">
+                        <nop-select asp-for="WidgetZones" asp-items="Model.AvailableWidgetZones" asp-multiple="true" />
+                        <script>
+                            $(document).ready(function () {
+                                var widgetZonesInput = $('#@Html.IdFor(model => model.WidgetZones)').data("kendoMultiSelect");
+                                widgetZonesInput.setOptions({
+                                    autoClose: false,
+                                    filter: "contains"
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Hour Offset
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-9 offset-number">
+                            <input type="number" min="0" asp-for="HourOffset" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Day Offset
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-9 offset-number">
+                            <input type="number" min="0" asp-for="DayOffset" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-header clearfix">
+            <div class="pull-right">
+                <button type="submit" name="save" class="btn bg-blue">
+                    <i class="fa fa-floppy-o"></i>
+                    @T("Admin.Common.Save")
+                </button>
+            </div>
+        </div>
+</form>

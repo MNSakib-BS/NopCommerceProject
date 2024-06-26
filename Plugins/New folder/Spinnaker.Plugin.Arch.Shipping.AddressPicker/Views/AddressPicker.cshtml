@@ -1,0 +1,237 @@
+﻿@*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_PZq7puxCtdTIkhxtsgrzP5jEKfdEos0&callback=initMap&v=weekly" defer></script>*@
+<script type="text/javascript">
+
+    window.onload = (event) => {
+        initMap();
+    };
+
+    function initMap() {
+        var mapControl = document.getElementById("map");
+        if (mapControl != undefined) {
+            map = new google.maps.Map(mapControl, {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 13,
+            });
+            infoWindow = new google.maps.InfoWindow();
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+                        marker = new google.maps.Marker({
+                            map: map,
+                            draggable: true,
+                            animation: google.maps.Animation.DROP,
+                            position: pos
+                        });
+                        google.maps.event.addListener(marker, 'dragend', function (marker) {
+                            var latLng = marker.latLng;
+                            currentLatitude = latLng.lat();
+                            currentLongitude = latLng.lng();
+                            setAddress(latLng.lat(), latLng.lng());
+
+                        });
+                        map.setCenter(pos);
+                        setAddress(pos.lat, pos.lng);
+                    },
+                    () => {
+                        handleLocationError(true, infoWindow, map.getCenter());
+                    });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+    }
+
+    function setAddress(lat, lon) {
+        let address1 = "";
+        let address2 = "";
+        let postcode = "";
+        let cityName = "";
+        let countryName = "";
+        let stateName = "";
+        var geocoder = geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+            'latLng': { lat: lat, lng: lon }
+        }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var getresult = results[0];
+                for (const component of getresult.address_components) {
+
+                    const componentType = component.types[0];
+                    switch (componentType) {
+                        case "street_number": {
+                            address1 = `${component.long_name} ${address1}`;
+                            break;
+                        }
+
+                        case "route": {
+                            address1 += component.short_name;
+                            break;
+                        }
+
+                        case "postal_code": {
+                            postcode = `${component.long_name}${postcode}`;
+
+                            break;
+                        }
+                        case "postal_code_suffix": {
+                            postcode = `${postcode}-${component.long_name}`;
+                            break;
+                        }
+                        case "locality": {
+                            cityName = `${component.long_name} ${cityName}`;
+                            break;
+                        }
+                        case "country": {
+                            countryName = `${component.long_name} ${countryName}`;
+                            break;
+                        }
+                        case "country": {
+                            countryName = `${component.long_name} ${countryName}`;
+                            break;
+                        }
+
+                        case "administrative_area_level_1": {
+                            stateName = `${component.long_name} ${stateName}`;
+                            break;
+                        }
+                        case "sublocality_level_2": {
+                            address2 = `${component.long_name} ${address2}`;
+                            break;
+                        }
+                    }
+
+                }
+
+
+
+                var address1Control = document.getElementById('Address_Address1');
+                var ShippingNewAddress_Address1 = document.getElementById('ShippingNewAddress_Address1');
+                var streetAddressControl = document.getElementById('StreetAddress');
+                var cityControl = document.getElementById('Address_City');
+                var city2Control = document.getElementById('City');
+                var ShippingNewAddress_City = document.getElementById('ShippingNewAddress_City');
+                var ShippingNewAddress_ZipPostalCode = document.getElementById('ShippingNewAddress_ZipPostalCode');
+                var ZipPostalCode =  document.getElementById('ZipPostalCode');
+                var postCodeControl = document.getElementById('Address_ZipPostalCode');
+                var address2Control = document.getElementById('Address_Address2');
+                var StreetAddress2 = document.getElementById('StreetAddress2');
+                var ShippingNewAddress_Address2 = document.getElementById('ShippingNewAddress_Address2');
+                var County =  document.getElementById('County');
+
+
+                if (streetAddressControl != undefined && streetAddressControl.value == "")
+                    streetAddressControl.value = address1;
+
+                if (address1Control != undefined && address1Control.value == "")
+                    address1Control.value = address1;
+
+                if (ShippingNewAddress_Address1 != undefined && ShippingNewAddress_Address1.value == "")
+                    ShippingNewAddress_Address1.value = address1;
+
+                if (cityControl != undefined && cityControl.value == "")
+                    cityControl.value = cityName;
+
+                if (ShippingNewAddress_City != undefined && ShippingNewAddress_City.value == "")
+                    ShippingNewAddress_City.value = cityName;
+
+                if (city2Control != undefined && city2Control.value == "")
+                    city2Control.value = cityName;
+
+                if (postCodeControl != undefined && postCodeControl.value == "")
+                    postCodeControl.value = postcode;
+
+                if (ShippingNewAddress_ZipPostalCode != undefined && ShippingNewAddress_ZipPostalCode.value == "")
+                    ShippingNewAddress_ZipPostalCode.value = postcode;
+
+                if (ZipPostalCode != undefined && ZipPostalCode.value == "") {
+                     ZipPostalCode.value = postcode;
+                }
+
+                if (address2Control != undefined && address2Control.value == "")
+                    address2Control.value = address2;
+
+                if (ShippingNewAddress_Address2 != undefined && ShippingNewAddress_Address2.value == "")
+                    ShippingNewAddress_Address2.value = address2;
+
+                if (StreetAddress2 != undefined && StreetAddress2.value == "") {
+                    StreetAddress2.value = address2;
+                }
+
+                if (County != undefined && County.value == "")
+                    County.value = stateName;
+
+
+
+                var addressCountryId = document.getElementById('Address_CountryId');
+
+                var CountryControl = document.getElementById('CountryId');
+                var ShippingNewAddress_CountryId = document.getElementById('ShippingNewAddress_CountryId');
+
+                if (ShippingNewAddress_CountryId != undefined && ShippingNewAddress_CountryId.value == "") {
+                    for (var i = 0; i < ShippingNewAddress_CountryId.options.length; i++) {
+                        if (ShippingNewAddress_CountryId.options[i].text.trim() === countryName.trim()) {
+                            ShippingNewAddress_CountryId.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (CountryControl != undefined && CountryControl.value == "") {
+                    for (var i = 0; i < CountryControl.options.length; i++) {
+                        if (CountryControl.options[i].text.trim() === countryName.trim()) {
+                            CountryControl.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (addressCountryId != undefined && addressCountryId.value == "") {
+                    for (var i = 0; i < addressCountryId.options.length; i++) {
+                        if (addressCountryId.options[i].text.trim() === countryName.trim()) {
+                            addressCountryId.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+
+                var addressProvinceControl = document.getElementById('Address_StateProvinceId');
+                var StateProvinceIdControl = document.getElementById('StateProvinceId');
+
+                if (StateProvinceIdControl != undefined && StateProvinceIdControl.value == "") {
+                    for (var i = 0; i < StateProvinceIdControl.options.length; i++) {
+                        if (StateProvinceIdControl.options[i].text.trim() === stateName.trim()) {
+                            StateProvinceIdControl.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+
+                if (addressProvinceControl != undefined && addressProvinceControl.value == "") {
+                    for (var i = 0; i < addressProvinceControl.options.length; i++) {
+                        if (addressProvinceControl.options[i].text.trim() === stateName.trim()) {
+                            addressProvinceControl.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        document.getElementById("map").style.display = "none";
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ? "Error: The Geolocation service failed." : "Error: Your browser doesn't support geolocation.");
+        infoWindow.open(map);
+    }
+    window.initMap = initMap;
+
+</script>

@@ -1,0 +1,31 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models;
+@model OrderDetailsDeliveryDateTimeModel
+
+@{
+    Layout = "";
+}
+
+@if (@ViewBag != null && @ViewBag.AdditionalData != null)
+{
+    @if (@ViewBag.AdditionalData.PickupInStore)
+    {
+        <ul class="order-overview-delivery-datetime-content">
+            <li class="delivery-date">@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.CollectionDate"): @Model.DeliveryDate</li>
+            <li class="delivery-time">@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.CollectionTime"): @Model.DeliveryTime</li>
+        </ul>
+    }
+    else
+    {
+        <ul class="order-overview-delivery-datetime-content">
+            <li class="delivery-date">@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.DeliveryDate"): @Model.DeliveryDate</li>
+            <li class="delivery-time">@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.DeliveryTime"): @Model.DeliveryTime</li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="order-overview-delivery-datetime-content">
+        <li class="delivery-date">@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.DeliveryDate"): @Model.DeliveryDate</li>
+        <li class="delivery-time">@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.DeliveryTime"): @Model.DeliveryTime</li>
+    </ul>
+}

@@ -1,0 +1,44 @@
+@using Nop.Core.Domain.Catalog;
+@using Nop.Web.Framework.Models.DataTables;
+@using Nop.Arch.Models.AbandonedCartReminder;
+@using Nop.Web.Framework.UI;
+@using Nop.Web.Framework.Infrastructure;
+@using Nop.Web.Framework.Mvc.Razor;
+
+@model AbandonedCartReminderModel
+
+@{
+    //page title
+    ViewBag.PageTitle = "Edit abandoned cart reminder details";
+    //active menu item (system name)
+    Html.SetActiveMenuItemSystemName("AbandonedCartReminder");
+}
+
+<form asp-controller="AbandonedCartReminder" asp-action="Edit" method="post">
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            Edit abandoned cart reminder details
+            <small>
+                <i class="fa fa-arrow-circle-left"></i>
+                <a asp-action="List">Back to abandoned cart reminder list</a>
+            </small>
+        </h1>
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.Save")
+            </button>
+            <button type="submit" name="save-continue" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.SaveContinue")
+            </button>
+            <span id="abandonedcartreminder-delete" class="btn bg-red">
+                <i class="fa fa-trash-o"></i>
+                @T("Admin.Common.Delete")
+            </span>
+            @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.StoreDetailsButtons, additionalData = Model })
+        </div>
+    </div>
+    @await Html.PartialAsync("_CreateOrUpdate", Model)
+</form>
+<nop-delete-confirmation asp-model-id="@Model.Id" asp-button-id="abandonedcartreminder-delete" />

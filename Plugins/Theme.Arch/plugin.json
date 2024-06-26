@@ -1,0 +1,12 @@
+﻿{
+  "Group": "Arch",
+  "FriendlyName": "Arch Theme",
+  "SystemName": "NopStation.Theme.Arch",
+  "Version": "4.3.1",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Spinnaker software",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.NopStation.Theme.Arch.dll",
+  "Description": "This plugin allows to configure Arch theme.",
+  "DependsOnSystemNames": [ "NopStation.Core" ]
+}

@@ -90,6 +90,10 @@
     {
       "SystemName": "Widgets.OurTeam",
       "Version": "1.0.0"
+    },
+    {
+      "SystemName": "Widget.OfferBanner",
+      "Version": "1.0.0"
     }
   ],
   "PluginNamesToUninstall": [],

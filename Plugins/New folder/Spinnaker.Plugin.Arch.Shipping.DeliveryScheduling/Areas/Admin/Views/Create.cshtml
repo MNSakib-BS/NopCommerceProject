@@ -1,0 +1,80 @@
+﻿@model Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models.AvailableDeliveryTimeRangeModel
+
+@{
+    Layout = "_AdminLayout";
+}
+
+<form asp-controller="DeliveryScheduling" asp-action="Create" method="post">
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            Select new Delivery Address
+            <small>
+                <i class="fa fa-arrow-circle-left"></i>
+                <a asp-controller="DeliveryScheduling" asp-action="Configure">Back to Delivery Configuration</a>
+            </small>
+        </h1>
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue save-btn" disabled>
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.Save")
+            </button>
+            <button type="submit" name="save-continue" class="btn bg-blue save-btn" disabled>
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.SaveContinue")
+            </button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="form-horizontal">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="col-md-2 text-label-input">
+                                <label>Please select a starting time</label>
+                            </div>
+                            <div class="col-md-3">
+                                <nop-select asp-for="StartTime" asp-items="Model.AvailableDeliveryDateTimeRangeModel" />
+                                <span asp-validation-for="StartTime"></span>
+                            </div>
+                            <div class="col-md-2 text-label-input">
+                                <label>Please select an end time</label>
+                            </div>
+                            <div class="col-md-3">
+                                <nop-select asp-for="EndTime" asp-items="Model.AvailableDeliveryDateTimeRangeModel" />
+                                <span asp-validation-for="EndTime"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $('#Time').prop('readonly', true);
+
+        function validateForm() {
+            var startTime = $("#StartTime").val();
+            var endTime = $("#EndTime").val();
+
+            if (!startTime || !endTime) {
+                $('.save-btn').prop('disabled', true);
+                return;
+            }
+
+            if (parseInt(startTime) >= parseInt(endTime)) {
+                $('.save-btn').prop('disabled', true);
+                return;
+            }
+
+            $('.save-btn').prop('disabled', false);
+        };
+
+        $('#StartTime, #EndTime').change(function () {
+            validateForm();
+        });
+    });
+</script>

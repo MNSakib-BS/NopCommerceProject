@@ -17,11 +17,11 @@
                 }
             </a>
             @{
-                //subcategories
+                
                 var subCategories = lineModel.ResponsiveMobileMenu ?
-                //responsive (all categories)
+                
                 lineModel.Category.SubCategories :
-                //standard design (only categories with "IncludeInTopMenu")
+                
                 lineModel.Category.SubCategories.Where(x => x.IncludeInTopMenu).ToList();
 
                 var levelClass = "";

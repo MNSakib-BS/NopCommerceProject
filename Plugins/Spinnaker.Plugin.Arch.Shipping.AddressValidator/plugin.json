@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Arch",
+  "FriendlyName": "Address Validator",
+  "SystemName": "Address.Validator",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "NopStation Team",
+  "DisplayOrder": 1,
+  "FileName": "Spinnaker.Plugin.Arch.Addressvalidator.dll",
+  "Description": ""
+}

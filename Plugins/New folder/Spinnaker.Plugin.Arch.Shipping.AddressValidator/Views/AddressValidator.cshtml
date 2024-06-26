@@ -1,0 +1,116 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.AddressValidator.Models
+@model AddressValidatorModel
+@{
+    var apiScript = $"https://maps.googleapis.com/maps/api/js?key={Model.GoogleApiKey}&libraries=geometry,places&callback=initAddressValidatorAutocomplete";
+}
+
+<script src="@Html.Raw(apiScript)" async defer></script>
+
+<script>
+
+    function initAddressValidatorAutocomplete() {
+
+        var input = (document.getElementById('ShippingNewAddress_Address1') == undefined) ? document.getElementById('BillingNewAddress_Address1') : document.getElementById('ShippingNewAddress_Address1');
+        input = input == undefined ? document.getElementById('Address_Address1') : input;
+
+        var options = {
+            types: [],
+            componentRestrictions: { country: '@(Model.CountryCode)' }
+        };
+
+        var places = new google.maps.places.Autocomplete(input, options);
+
+        google.maps.event.addListener(places, 'place_changed', function () {
+            var inputValue = input.value;
+            var place = places.getPlace();
+            getAddress(place.address_components, inputValue);
+        });
+    }
+
+    function getAddress(addressComponents, inputValue) {
+
+        var city = "";
+        var country = "";
+        var postalCode = "";
+        var streetAddress = inputValue.split(' ')[0];
+        var streetAddress2 = "";
+        for (var count = 0; count < addressComponents.length; count++) {
+
+            switch (addressComponents[count].types[0]) {
+
+                case "locality":
+                    var cy = addressComponents[count].long_name;
+                    if (cy != undefined) {
+                        city = cy;
+                    }
+                    break;
+
+                case "sublocality_level_1":
+                    var sa2 = addressComponents[count].long_name;
+                    if (sa2 != undefined) {
+                        streetAddress2 = sa2;
+                    }
+                    break;
+
+                case "sublocality_level_2":
+                    // overwrite level 1 to get the most outer region
+                    var sa2 = streetAddress2 = addressComponents[count].long_name;
+                    if (sa2 != undefined) {
+                        streetAddress2 = sa2;
+                    }
+                    break;
+
+                case "country":
+                    var ct = addressComponents[count].long_name;
+                    if (ct != undefined) {
+                        country = ct;
+                    }
+                    break;
+
+                case "street_number":
+                    var sn = addressComponents[count].long_name;
+                    if (sn != undefined) {
+                        streetAddress = sn;
+                    }
+                    break;
+
+                case "route":
+                    var rt = `${streetAddress} ${addressComponents[count].long_name}`;
+                    if (rt != undefined) {
+                        streetAddress = rt;
+                    }
+                    break;
+
+                case "postal_code":
+                    var pc = addressComponents[count].long_name;
+                    if (pc != undefined) {
+                        postalCode = pc
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        var input = (document.getElementById('ShippingNewAddress_Address1') == undefined) ? document.getElementById('BillingNewAddress_Address1') : document.getElementById('ShippingNewAddress_Address1');
+        var idElement;
+        input = input == undefined ? document.getElementById('Address_Address1') : input;
+
+        switch (input.id) {
+            case "BillingNewAddress_Address1":
+                idElement = "BillingNewAddress_";
+                break;
+            case "ShippingNewAddress_Address1":
+                idElement = "ShippingNewAddress_";
+                break;
+            case "Address_Address1":
+                idElement = "Address_";
+        }
+
+        document.getElementById(idElement + "ZipPostalCode").value = postalCode;
+        document.getElementById(idElement + "City").value = city;
+        document.getElementById(idElement + "Address1").value = streetAddress;
+        document.getElementById(idElement + "Address2").value = streetAddress2;
+    }
+
+</script>

@@ -327,4 +327,5 @@ public partial interface IShoppingCartService
     /// The task result contains the error (if exists); otherwise, empty string
     /// </returns>
     Task<(string error, int cycleLength, RecurringProductCyclePeriod cyclePeriod, int totalCycles)> GetRecurringCycleInfoAsync(IList<ShoppingCartItem> shoppingCart);
+    object UpdateShoppingCartItemAsync(object currentCustomer, object id, object attributesXml, object customerEnteredPrice, object rentalStartDateUtc, object rentalEndDateUtc, object newQuantity, bool v);
 }

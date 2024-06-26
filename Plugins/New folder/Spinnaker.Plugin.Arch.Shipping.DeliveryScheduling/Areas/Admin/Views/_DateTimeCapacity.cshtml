@@ -1,0 +1,99 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models;
+@model Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Areas.Admin.Models.ShippingMethodAvailableDateCapacity
+
+
+<form id="capacity-count-availability" asp-area="Admin" asp-controller="DeliveryScheduling" asp-action="UpdateCapacity" method="post">
+
+    <table class="table table-shipping-method-capacity">
+        <thead>
+            <tr>
+                <th>Day / Time Range</th>
+                @foreach (var timeRange in Model.TimeRange)
+                {
+                    <th>@timeRange</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var day in Model.Days)
+            {
+                <tr>
+                    <td>@day.Key</td>
+                    @foreach (var capacity in Model.Capacities)
+                    {
+                        if (day.Value == capacity.Value.Item2)
+                        {
+                            <td>
+                                @{
+                                    int key = capacity.Key;
+                                    (int currentCapacity, int dayValue) = (0, day.Value);
+                                    if (capacity.Value.Item2 == dayValue)
+                                    {
+                                        currentCapacity = capacity.Value.Item1;
+                                    }
+                                }
+                                <input min="0" id="id-@key" type="number" name="@key" value="@currentCapacity" />
+                            </td>
+                        }
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div id="alert-div-shipping-capacity"></div>
+    <button action="submit" class="btn bg-blue">
+        <i class=" fa fa-plus-square"></i>
+        @T("Update Capacity")
+    </button>
+</form>
+
+<script>
+    $(document).ready(function () {
+
+        $('#capacity-count-availability').submit(function (e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+
+            var data = {};
+
+            // collect all the form data
+            $(this).find('input[type=number]').each(function () {
+                var name = $(this).attr('name');
+                var value = $(this).val();
+
+                data[name] = value;
+            });
+
+            // Send data using AJAX
+            $.ajax({
+                type: "POST",
+                url: '/Admin/DeliveryScheduling/UpdateCapacity',
+                data: JSON.stringify(data),
+                contentType: 'application/json; charset=utf-8',
+                success: function (response) {
+                    $('#alert-div-shipping-capacity')
+                        .html(response.message)
+                        .addClass("alert alert-success");
+
+                    setTimeout(function () {
+                        $('#alert-div-shipping-capacity').fadeOut('slow', function () {
+                            // Optionally clear the content after fading out
+                            $(this).html("").removeClass("alert alert-success");
+                            $(this).show();
+                        });
+                    }, 3000);
+
+                },
+                error: function (error) {
+                    // Handle errors here
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+

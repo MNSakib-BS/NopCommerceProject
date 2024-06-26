@@ -1,0 +1,82 @@
+﻿@model ConfigurationModel
+
+@{
+    Layout = "_AdminLayout";
+    Html.SetActiveMenuItemSystemName("Arch.Configuration");
+
+    ViewBag.PageTitle = T("Admin.NopStation.Theme.Arch.Configuration").Text;
+
+    Html.AddScriptParts("~/lib/farbtastic/farbtastic.js");
+    Html.AddCssFileParts("~/lib/farbtastic/farbtastic.css");
+}
+
+<script>
+    $(document).ready(function() {
+        $("#@Html.IdFor(model => model.EnableImageLazyLoad)").change(toggleLazyLoadPictureId);
+        $("#@Html.IdFor(model => model.ShowSupportedCardsPictureAtPageFooter)").change(toggleSupportedCardsPictureId);
+        $("#@Html.IdFor(model => model.ShowLogoAtPageFooter)").change(toggleFooterLogoPictureId);
+        $("#@Html.IdFor(model => model.ShowLoginPictureAtLoginPage)").change(toggleLoginPictureId);
+
+        toggleLazyLoadPictureId();
+        toggleSupportedCardsPictureId();
+        toggleFooterLogoPictureId();
+        toggleLoginPictureId();
+    });
+
+    function toggleLazyLoadPictureId() {
+        if ($('#@Html.IdFor(model => model.EnableImageLazyLoad)').is(':checked')) {
+            $('#pnlLazyLoadPictureId').show();
+        } else {
+            $('#pnlLazyLoadPictureId').hide();
+        }
+    }
+
+    function toggleSupportedCardsPictureId() {
+        if ($('#@Html.IdFor(model => model.ShowSupportedCardsPictureAtPageFooter)').is(':checked')) {
+            $('#pnlSupportedCardsPictureId').show();
+        } else {
+            $('#pnlSupportedCardsPictureId').hide();
+        }
+    }
+
+    function toggleFooterLogoPictureId() {
+        if ($('#@Html.IdFor(model => model.ShowLogoAtPageFooter)').is(':checked')) {
+            $('#pnlFooterLogoPictureId').show();
+        } else {
+            $('#pnlFooterLogoPictureId').hide();
+        }
+    }
+
+    function toggleLoginPictureId() {
+        if ($('#@Html.IdFor(model => model.ShowLoginPictureAtLoginPage)').is(':checked')) {
+            $('#pnlLoginPictureId').show();
+        } else {
+            $('#pnlLoginPictureId').hide();
+        }
+    }
+</script>
+
+<form asp-controller="ArchTheme" asp-action="Configure" method="post">
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            @T("Admin.NopStation.Theme.Arch.Configuration")
+        </h1>
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.Save")
+            </button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="form-horizontal">
+            @await Component.InvokeAsync("StoreScopeConfiguration")
+            <div asp-validation-summary="All"></div>
+            <nop-tabs id="Arch-configure-edit" >
+                <nop-tab asp-name="tab-general" asp-title="@T("Admin.NopStation.Theme.Arch.Configuration.TabTitle.GeneralSettings")" asp-default="true">@await Html.PartialAsync("_Configure.GeneralSettings", Model)</nop-tab>
+                <nop-tab asp-name="tab-footer-description" asp-title="@T("Admin.NopStation.Theme.Arch.Configuration.TabTitle.FooterTopDescription")">@await Html.PartialAsync("_Configure.FooterTopDescription", Model)</nop-tab>
+            </nop-tabs>
+        </div>
+    </div>
+</form>

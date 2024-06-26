@@ -1,0 +1,38 @@
+@using Nop.Core.Domain.Catalog;
+@using Nop.Web.Framework.Models.DataTables;
+@using Nop.Arch.Models.AbandonedCartReminder;
+@using Nop.Web.Framework.UI;
+@using Nop.Web.Framework.Infrastructure;
+@using Nop.Web.Framework.Mvc.Razor;
+
+@model AbandonedCartReminderModel
+@{
+    //page title
+    ViewBag.PageTitle = "Add a new abandoned cart reminder";
+    //active menu item (system name)
+    Html.SetActiveMenuItemSystemName("AbandonedCartReminder");
+}
+
+<form asp-controller="AbandonedCartReminder" asp-action="Create" method="post">
+    <div class="content-header clearfix">
+        <h1 class="pull-left">
+            Add a new abandoned cart reminder
+            <small>
+                <i class="fa fa-arrow-circle-left"></i>
+                <a asp-action="List">Back to abandoned cart reminder list</a>
+            </small>
+        </h1>
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.Save")
+            </button>
+            <button type="submit" name="save-continue" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.SaveContinue")
+            </button>
+            @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.StoreDetailsButtons })
+        </div>
+    </div>
+    @await Html.PartialAsync("_CreateOrUpdate", Model)
+</form>

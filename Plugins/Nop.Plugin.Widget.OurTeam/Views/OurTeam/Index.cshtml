@@ -5,93 +5,163 @@
     NopHtml.AppendCssFileParts("~/Plugins/Widgets.OurTeam/Content/style.css");
 } *@
 <div class="employee-container">
+    <div class="grid-title">
+        <h2>Our Team</h2>
+    </div>
     @foreach (var employee in Model)
     {
         <div class="employee-item">
             <div class="profile-picture">
                 <img src="@employee.PictureThumbnailUrl" alt="Profile Picture">
+                <div class="wave-overlay"></div>
             </div>
             <div class="employee-details">
                 <div class="employee-name"><h3>@employee.Name</h3></div>
                 <div class="employee-designation"><p>@employee.Designation</p></div>
                 <div class="status-badges">
-                    @if (employee.IsMVP)
-                    {
-                        <div class="badge" title="nopCommerce MVP">
-                            <img src="https://www.nop-station.com/images/thumbs/0002602_bigbadge_mvp.png" alt="MVP">
-                        </div>
-                    }
-                    @if (employee.IsNopCommerceCertified)
-                    {
-                        <div class="badge" title="nopCommerce Certified Developer">
-                            <img src="https://www.nop-station.com/images/thumbs/0002603_bigbadge_certifieddev.png" alt="Certified">
-                        </div>
-                    }
+                    <div class="left-badges">
+                        @if (employee.IsMVP)
+                        {
+                            <div class="badge" title="nopCommerce MVP">
+                                <img src="https://www.nop-station.com/images/thumbs/0002602_bigbadge_mvp.png" alt="MVP">
+                                <a>nop</a>
+                                <a>MVP</a>
+                            </div>
+                        }
+                    </div>
+                    <div class="right-badges">
+                        @if (employee.IsNopCommerceCertified)
+                        {
+                            <div class="badge" title="nopCommerce Certified Developer">
+                                <img src="https://www.nop-station.com/images/thumbs/0002603_bigbadge_certifieddev.png" alt="Certified">
+                                <a>Certified</a>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
     }
 </div>
-
 <style>
     .employee-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Center the grid */
+        justify-content: center;
         gap: 20px;
-        padding: 20px 0; /* Adjusted padding */
+        padding: 20px 0;
     }
 
     .employee-item {
         width: calc(33.33% - 20px);
-        max-width: 300px;
+        max-width: 320px;
         border: 1px solid #ddd;
         border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         background-color: #ffffff;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         margin-bottom: 20px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
         .employee-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
         }
 
-    .profile-picture img {
+    .profile-picture {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+    .employee-item:hover .profile-picture img {
+        filter: grayscale(0%);
+    }
+
+    .wave-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        object-fit: cover;
+        height: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192 C48,160,192,64,288,80 C384,96,480,256,576,192 C672,128,768,320,864,256 C960,192,1056,320,1152,256 C1248,192,1344,320,1392,256 L1440,256 L1440,320 L1392,320 C1344,320,1248,320,1152,320 C1048,320,960,320,864,320 C768,320,672,320,576,320 C480,320,384,320,288,320 C192,320,48,320,0,288 Z ' /%3E%3C/svg%3E");
+        background-repeat: repeat-x;
+        background-position: 0 5px;
     }
 
     .employee-details {
-        padding: 10px;
+        padding: 15px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .employee-name {
-        font-size: 1.6em;
+        font-size: 1.8em;
         font-weight: bold;
+        text-align: left;
+        margin-bottom: 0px;
     }
 
     .employee-designation {
-        font-size: 1.2em;
-        margin-bottom: 10px;
+        font-size: 1.4em;
+        margin-bottom: 2px;
+        text-align: left;
     }
 
     .status-badges {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .left-badges, .right-badges {
+        display: flex;
         align-items: center;
     }
 
+    .grid-title {
+        text-align: center;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+        .grid-title h2 {
+            font-size: 2em;
+            color: #325;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: #87CEEB;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
     .badge {
-        margin-right: 5px;
+        margin: 5px;
     }
 
         .badge img {
-            width: 25px;
-            height: 25px;
+            width: 50px;
+            height: 50px;
             vertical-align: middle;
         }
 </style>

@@ -1,0 +1,85 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models;
+@model OrderDetailsDeliveryDateTimeModel
+
+@{
+    Layout = "";
+}
+
+<ul class="loadDeliveryDateTimes" style="display:none">
+    <li class="delivery-date">
+        <span class="label">
+            @T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.DeliveryDate"):
+        </span>
+        <span class="value">
+            @Model.DeliveryDate
+        </span>
+    </li>
+    <li class="delivery-time">
+        <span class="label">
+            Time:
+        </span>
+        <span class="value">
+            @Model.DeliveryTime
+        </span>
+    </li>
+</ul>
+
+<ul class="loadCollectionDateTimes" style="display:none">
+    <li class="delivery-date">
+        <span class="label">
+            @T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.CollectionTime"):
+        </span>
+        <span class="value">
+            @Model.DeliveryDate
+        </span>
+    </li>
+    <li class="delivery-time">
+        <span class="label">
+            @T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.OrderDetails.CollectionDate"):
+        </span>
+        <span class="value">
+            @Model.DeliveryTime
+        </span>
+    </li>
+</ul>
+
+@if (Model.IsOpc)
+{
+    <script>
+        $(document).ready(function () {
+            var elem = $(".order-review-data .shipping-method");
+            if (elem.length) {
+                $(".loadDeliveryDateTimes").children().insertAfter(elem);
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var elem = $(".order-review-data .collection-method");
+            if (elem.length) {
+                $(".loadCollectionDateTimes").children().insertAfter(elem);
+            }
+        });
+    </script>
+}
+else
+{
+    <script>
+        Resanehlab.documentReady(function () {
+            var elem = $(".order-review-data .shipping-method");
+            if (elem.length) {
+                $(".loadDeliveryDateTimes").children().insertAfter(elem);
+            }
+        });
+    </script>
+
+    <script>
+        Resanehlab.documentReady(function () {
+            var elem = $(".order-review-data .collection-method");
+            if (elem.length) {
+                $(".loadCollectionDateTimes").children().insertAfter(elem);
+            }
+        });
+    </script>
+}

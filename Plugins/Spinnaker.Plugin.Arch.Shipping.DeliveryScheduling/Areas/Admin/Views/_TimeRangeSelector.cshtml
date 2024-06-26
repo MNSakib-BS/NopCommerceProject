@@ -1,0 +1,52 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models;
+@using Nop.Web.Framework.Models.DataTables;
+@model Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Areas.Admin.Models.TimeRangeSearchModel
+
+<form asp-area="Admin" asp-controller="DeliveryScheduling" asp-action="Create" method="post">
+    <section class="content vaf-content-list-table">
+        <div class="container-fluid">
+            <div class="form-horizontal">
+                @{
+                    var timeRange = new DataTablesModel()
+            {
+                Name = "time-range-grid",
+                SearchButtonId = "search-leads",
+                UrlRead = new DataUrl("TimeRangeList", "DeliveryScheduling", null),
+                Length = Model.PageSize,
+                LengthMenu = Model.AvailablePageSizes,
+                Ordering = true,
+                RefreshButton = false,
+                Filters = new List<FilterParameter>
+                {
+                new FilterParameter(nameof(AvailableDeliveryTimeRangeModel.Time))
+                },
+                ColumnCollection = new List<ColumnProperty>
+                {
+                new ColumnProperty(nameof(AvailableDeliveryTimeRangeModel.Time))
+                {
+                Title = "time",
+                ClassName="time-range-Details"
+                },
+                new ColumnProperty(nameof(AvailableDeliveryTimeRangeModel.Id))
+                {
+                Title = T("Admin.Common.Edit").Text,
+                Width = "80",
+                ClassName = NopColumnClassDefaults.Button,
+                Render = new RenderButtonEdit(new DataUrl("Edit"))
+                }
+                }
+            };
+                }
+                @await Html.PartialAsync("Table", timeRange)
+            </div>
+        </div>
+    </section>
+    <div class="content-header clearfix">
+        <div class="pull-right">
+            <button action="Create" class="btn bg-blue">
+                <i class=" fa fa-plus-square"></i>
+                @T("Admin.Common.AddNew")
+            </button>
+        </div>
+    </div>
+</form>

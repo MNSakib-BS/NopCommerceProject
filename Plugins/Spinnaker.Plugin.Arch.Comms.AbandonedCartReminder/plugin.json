@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Comms",
+  "FriendlyName": "Abandoned Cart Reminder",
+  "SystemName": "Arch.Comms.AbandonedCartReminder",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Spinnaker Software",
+  "DisplayOrder": 1,
+  "FileName": "Spinnaker.Plugin.Arch.Comms.AbandonedCartReminder.dll",
+  "Description": ""
+}

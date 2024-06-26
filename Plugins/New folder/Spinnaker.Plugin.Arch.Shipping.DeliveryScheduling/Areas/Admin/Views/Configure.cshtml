@@ -1,0 +1,92 @@
+﻿@model Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Areas.Admin.Models.ConfigurationModel
+
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<style>
+    .main-footer {
+        margin-left: 0px;
+    }
+</style>
+
+@if ((Model.StoreCount > 1 && Model.StoreId > 0) || (Model.StoreCount == 1))
+{
+    <div class="content">
+        <div class="form-horizontal">
+            @await Component.InvokeAsync("SettingMode")
+            <div asp-validation-summary="All"></div>
+            <nop-panels id="deliveryscheduling-panels">
+                <nop-panel asp-name="deliveryscheduling-widgets" asp-icon="fa fa-info" asp-title="Widgets" asp-hide-block-attribute-name="false" asp-hide="false" asp-advanced="false">@await Html.PartialAsync("_WidgetSelector.cshtml", Model)</nop-panel>
+                <nop-panel asp-name="deliveryscheduling-time-range" asp-icon="fa fa-info" asp-title="Time Range Availability" asp-hide-block-attribute-name="false" asp-hide="false" asp-advanced="false">@await Html.PartialAsync("_TimeRangeSelector.cshtml", Model.TimeRangeSearchModel)</nop-panel>
+                <nop-panel asp-name="deliveryscheduling-time-range" asp-icon="fa fa-info" asp-title="Time Range Availability" asp-hide-block-attribute-name="false" asp-hide="false" asp-advanced="false">
+                    <form id="deliveryCapacityForm">
+                        <div class="col-md-2 text-label-input">
+                            <label>Please select a shipping method</label>
+                        </div>
+                        <div class="col-md-9">
+                            <nop-select asp-for="ShippingMethodId" asp-items="Model.ShippingMethods" />
+                            <span asp-validation-for="ShippingMethodId"></span>
+                        </div>
+                        <button style="display:none;" action="submit" class="btn bg-blue">
+                            <i class=" fa fa-plus-square"></i>
+                            @T("Admin.Common.AddNew")
+                        </button>
+                    </form>
+                    <div id="date-time-capacity-partial" class="date-time-capacity-table">
+                    </div>
+
+                </nop-panel>
+            </nop-panels>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#deliveryCapacityForm').submit(function (e) {
+                e.preventDefault();
+
+                let shippingMethodId = $(this).find('select[name="ShippingMethodId"]').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: '/Admin/DeliveryScheduling/ShowDeliveryCapacitySchedule',
+                    data: { shippingMethodId: shippingMethodId },
+                    success: function (response) {
+                        $('#date-time-capacity-partial').html(response);
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+
+            function toggleTableVisibility() {
+                var selectedValue = $('#ShippingMethodId').val();
+                var selectedIntValue = parseInt(selectedValue, 10);
+
+                if (selectedValue === "0") {
+                    $('.date-time-capacity-table').hide();
+                } else {
+                    $('.date-time-capacity-table').show();
+
+                    $('#deliveryCapacityForm').submit();
+                }
+            }
+
+            // Initial call
+            toggleTableVisibility();
+
+            // Attach the change event listener
+            $('#ShippingMethodId').change(function () {
+                toggleTableVisibility();
+            });
+        });
+    </script>
+}
+else
+{
+    <div>Please select a specific store to configure delivery times.</div>
+}

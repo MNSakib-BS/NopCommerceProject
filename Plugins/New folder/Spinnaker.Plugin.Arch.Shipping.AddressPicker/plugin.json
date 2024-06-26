@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Arch",
+  "FriendlyName": "Address Picker",
+  "SystemName": "Address.Picker",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "NopStation",
+  "DisplayOrder": 1,
+  "FileName": "Spinnaker.Plugin.Arch.AddressPicker.dll",
+  "Description": ""
+}

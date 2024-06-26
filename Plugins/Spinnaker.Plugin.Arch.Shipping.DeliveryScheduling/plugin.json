@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Arch",
+  "FriendlyName": "Arch Delivery Scheduler",
+  "SystemName": "Arch.DeliveryScheduling",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Acumen",
+  "DisplayOrder": 1,
+  "FileName": "Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.dll",
+  "Description": "This plugin supports delivery scheduling"
+}

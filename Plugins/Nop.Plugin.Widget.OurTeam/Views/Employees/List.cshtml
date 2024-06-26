@@ -1,5 +1,5 @@
-﻿@model EmployeeSearchModel
-
+﻿@using Nop.Web.Framework.Models.DataTables
+@model EmployeeSearchModel
 @{
     Layout = "_AdminLayout";
     //page title
@@ -99,9 +99,9 @@
                         },
                         new ColumnProperty(nameof(EmployeeModel.PictureThumbnailUrl))
                         {
-                        Title = T("Admin.Misc.Employee.Fields.Picture").Text, // Set the title for the column
-                        Width = "100", // Set the width of the column
-                        Render = new RenderPicture(width: 100) // Render the picture with a width of 100 pixels
+                        Title = T("Admin.Misc.Employee.Fields.Picture").Text, 
+                        Width = "100",
+                        Render = new RenderPicture(width: 100) 
                         },
                         new ColumnProperty(nameof(EmployeeModel.Name))
                         {

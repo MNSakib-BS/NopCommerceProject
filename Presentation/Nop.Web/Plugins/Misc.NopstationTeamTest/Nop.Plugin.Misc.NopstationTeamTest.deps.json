@@ -36,7 +36,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Nop.Plugin.Misc.NopstationTeamTest/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "8.0.5",
+          "Microsoft.EntityFrameworkCore": "8.0.6",
           "Nop.Core": "4.70.0",
           "Nop.Data": "4.70.0",
           "Nop.Services": "4.70.0",
@@ -406,7 +406,7 @@
           "lib/net6.0/AutoMapper.dll": {}
         }
       },
-      "Azure.Core/1.38.0": {
+      "Azure.Core/1.39.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "System.ClientModel": "1.0.0",
@@ -419,8 +419,8 @@
         },
         "runtime": {
           "lib/net6.0/Azure.Core.dll": {
-            "assemblyVersion": "1.38.0.0",
-            "fileVersion": "1.3800.24.12602"
+            "assemblyVersion": "1.39.0.0",
+            "fileVersion": "1.3900.24.21804"
           }
         },
         "compile": {
@@ -429,8 +429,8 @@
       },
       "Azure.Extensions.AspNetCore.DataProtection.Blobs/1.3.4": {
         "dependencies": {
-          "Azure.Core": "1.38.0",
-          "Azure.Storage.Blobs": "12.19.1",
+          "Azure.Core": "1.39.0",
+          "Azure.Storage.Blobs": "12.20.0",
           "Microsoft.AspNetCore.DataProtection": "3.1.32"
         },
         "runtime": {
@@ -445,7 +445,7 @@
       },
       "Azure.Extensions.AspNetCore.DataProtection.Keys/1.2.3": {
         "dependencies": {
-          "Azure.Core": "1.38.0",
+          "Azure.Core": "1.39.0",
           "Azure.Security.KeyVault.Keys": "4.2.0",
           "Microsoft.AspNetCore.DataProtection": "3.1.32"
         },
@@ -459,11 +459,11 @@
           "lib/netstandard2.0/Azure.Extensions.AspNetCore.DataProtection.Keys.dll": {}
         }
       },
-      "Azure.Identity/1.11.2": {
+      "Azure.Identity/1.11.4": {
         "dependencies": {
-          "Azure.Core": "1.38.0",
-          "Microsoft.Identity.Client": "4.60.3",
-          "Microsoft.Identity.Client.Extensions.Msal": "4.60.3",
+          "Azure.Core": "1.39.0",
+          "Microsoft.Identity.Client": "4.61.3",
+          "Microsoft.Identity.Client.Extensions.Msal": "4.61.3",
           "System.Memory": "4.5.4",
           "System.Security.Cryptography.ProtectedData": "8.0.0",
           "System.Text.Json": "8.0.0",
@@ -471,8 +471,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Identity.dll": {
-            "assemblyVersion": "1.11.2.0",
-            "fileVersion": "1.1100.224.21902"
+            "assemblyVersion": "1.11.4.0",
+            "fileVersion": "1.1100.424.31005"
           }
         },
         "compile": {
@@ -481,7 +481,7 @@
       },
       "Azure.Security.KeyVault.Keys/4.2.0": {
         "dependencies": {
-          "Azure.Core": "1.38.0",
+          "Azure.Core": "1.39.0",
           "System.Memory": "4.5.4",
           "System.Text.Json": "8.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -496,41 +496,41 @@
           "lib/netstandard2.0/Azure.Security.KeyVault.Keys.dll": {}
         }
       },
-      "Azure.Storage.Blobs/12.19.1": {
+      "Azure.Storage.Blobs/12.20.0": {
         "dependencies": {
-          "Azure.Storage.Common": "12.18.1",
+          "Azure.Storage.Common": "12.19.0",
           "System.Text.Json": "8.0.0"
         },
         "runtime": {
           "lib/net6.0/Azure.Storage.Blobs.dll": {
-            "assemblyVersion": "12.19.1.0",
-            "fileVersion": "12.1900.123.56305"
+            "assemblyVersion": "12.20.0.0",
+            "fileVersion": "12.2000.24.26306"
           }
         },
         "compile": {
           "lib/net6.0/Azure.Storage.Blobs.dll": {}
         }
       },
-      "Azure.Storage.Common/12.18.1": {
+      "Azure.Storage.Common/12.19.0": {
         "dependencies": {
-          "Azure.Core": "1.38.0",
+          "Azure.Core": "1.39.0",
           "System.IO.Hashing": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Azure.Storage.Common.dll": {
-            "assemblyVersion": "12.18.1.0",
-            "fileVersion": "12.1800.123.56305"
+            "assemblyVersion": "12.19.0.0",
+            "fileVersion": "12.1900.24.26306"
           }
         },
         "compile": {
           "lib/net6.0/Azure.Storage.Common.dll": {}
         }
       },
-      "BouncyCastle.Cryptography/2.3.0": {
+      "BouncyCastle.Cryptography/2.3.1": {
         "runtime": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.3.0.53016"
+            "fileVersion": "2.3.1.17862"
           }
         },
         "compile": {
@@ -640,102 +640,102 @@
           "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {}
         }
       },
-      "FluentMigrator.Extensions.MySql/5.1.0": {
+      "FluentMigrator.Extensions.MySql/5.2.0": {
         "dependencies": {
           "FluentMigrator.Abstractions": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Extensions.MySql.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Extensions.MySql.dll": {}
         }
       },
-      "FluentMigrator.Extensions.Oracle/5.1.0": {
+      "FluentMigrator.Extensions.Oracle/5.2.0": {
         "dependencies": {
           "FluentMigrator.Abstractions": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {}
         }
       },
-      "FluentMigrator.Extensions.Postgres/5.1.0": {
+      "FluentMigrator.Extensions.Postgres/5.2.0": {
         "dependencies": {
           "FluentMigrator.Abstractions": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Extensions.Postgres.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Extensions.Postgres.dll": {}
         }
       },
-      "FluentMigrator.Extensions.Snowflake/5.1.0": {
+      "FluentMigrator.Extensions.Snowflake/5.2.0": {
         "dependencies": {
           "FluentMigrator.Abstractions": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Extensions.Snowflake.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Extensions.Snowflake.dll": {}
         }
       },
-      "FluentMigrator.Extensions.SqlServer/5.1.0": {
+      "FluentMigrator.Extensions.SqlServer/5.2.0": {
         "dependencies": {
           "FluentMigrator.Abstractions": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
         }
       },
-      "FluentMigrator.Runner/5.1.0": {
+      "FluentMigrator.Runner/5.2.0": {
         "dependencies": {
-          "FluentMigrator.Runner.Core": "5.1.0",
-          "FluentMigrator.Runner.Db2": "5.1.0",
-          "FluentMigrator.Runner.Firebird": "5.1.0",
-          "FluentMigrator.Runner.Hana": "5.1.0",
-          "FluentMigrator.Runner.MySql": "5.1.0",
-          "FluentMigrator.Runner.Oracle": "5.1.0",
-          "FluentMigrator.Runner.Postgres": "5.1.0",
-          "FluentMigrator.Runner.Redshift": "5.1.0",
-          "FluentMigrator.Runner.SQLite": "5.1.0",
-          "FluentMigrator.Runner.Snowflake": "5.1.0",
-          "FluentMigrator.Runner.SqlServer": "5.1.0",
+          "FluentMigrator.Runner.Core": "5.2.0",
+          "FluentMigrator.Runner.Db2": "5.2.0",
+          "FluentMigrator.Runner.Firebird": "5.2.0",
+          "FluentMigrator.Runner.Hana": "5.2.0",
+          "FluentMigrator.Runner.MySql": "5.2.0",
+          "FluentMigrator.Runner.Oracle": "5.2.0",
+          "FluentMigrator.Runner.Postgres": "5.2.0",
+          "FluentMigrator.Runner.Redshift": "5.2.0",
+          "FluentMigrator.Runner.SQLite": "5.2.0",
+          "FluentMigrator.Runner.Snowflake": "5.2.0",
+          "FluentMigrator.Runner.SqlServer": "5.2.0",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.dll": {}
         }
       },
-      "FluentMigrator.Runner.Core/5.1.0": {
+      "FluentMigrator.Runner.Core/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
           "FluentMigrator.Abstractions": "5.2.0",
@@ -746,165 +746,165 @@
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {}
         }
       },
-      "FluentMigrator.Runner.Db2/5.1.0": {
+      "FluentMigrator.Runner.Db2/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {}
         }
       },
-      "FluentMigrator.Runner.Firebird/5.1.0": {
+      "FluentMigrator.Runner.Firebird/5.2.0": {
         "dependencies": {
           "FirebirdSql.Data.FirebirdClient": "10.0.0",
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Runner.Core": "5.1.0",
+          "FluentMigrator.Runner.Core": "5.2.0",
           "Microsoft.Extensions.Options": "8.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {}
         }
       },
-      "FluentMigrator.Runner.Hana/5.1.0": {
+      "FluentMigrator.Runner.Hana/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {}
         }
       },
-      "FluentMigrator.Runner.MySql/5.1.0": {
+      "FluentMigrator.Runner.MySql/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Extensions.MySql": "5.1.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Extensions.MySql": "5.2.0",
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {}
         }
       },
-      "FluentMigrator.Runner.Oracle/5.1.0": {
+      "FluentMigrator.Runner.Oracle/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Extensions.Oracle": "5.1.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Extensions.Oracle": "5.2.0",
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {}
         }
       },
-      "FluentMigrator.Runner.Postgres/5.1.0": {
+      "FluentMigrator.Runner.Postgres/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Extensions.Postgres": "5.1.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Extensions.Postgres": "5.2.0",
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {}
         }
       },
-      "FluentMigrator.Runner.Redshift/5.1.0": {
+      "FluentMigrator.Runner.Redshift/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {}
         }
       },
-      "FluentMigrator.Runner.Snowflake/5.1.0": {
+      "FluentMigrator.Runner.Snowflake/5.2.0": {
         "dependencies": {
-          "FluentMigrator.Extensions.Snowflake": "5.1.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Extensions.Snowflake": "5.2.0",
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.Snowflake.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.Snowflake.dll": {}
         }
       },
-      "FluentMigrator.Runner.SQLite/5.1.0": {
+      "FluentMigrator.Runner.SQLite/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Runner.Core": "5.1.0"
+          "FluentMigrator.Runner.Core": "5.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {}
         }
       },
-      "FluentMigrator.Runner.SqlServer/5.1.0": {
+      "FluentMigrator.Runner.SqlServer/5.2.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Extensions.SqlServer": "5.1.0",
-          "FluentMigrator.Runner.Core": "5.1.0",
-          "Microsoft.Data.SqlClient": "5.2.0"
+          "FluentMigrator.Extensions.SqlServer": "5.2.0",
+          "FluentMigrator.Runner.Core": "5.2.0",
+          "Microsoft.Data.SqlClient": "5.2.1"
         },
         "runtime": {
           "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {
-            "assemblyVersion": "5.1.0.0",
-            "fileVersion": "5.1.0.0"
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.0"
           }
         },
         "compile": {
@@ -996,24 +996,24 @@
           "lib/net6.0/Google.Apis.Core.dll": {}
         }
       },
-      "HarfBuzzSharp/7.3.0.1": {
+      "HarfBuzzSharp/7.3.0.2": {
         "dependencies": {
-          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0.1",
-          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0.1"
+          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0.2"
         },
         "runtime": {
           "lib/net6.0/HarfBuzzSharp.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "7.3.0.1"
+            "fileVersion": "7.3.0.2"
           }
         },
         "compile": {
           "lib/net6.0/HarfBuzzSharp.dll": {}
         }
       },
-      "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+      "HarfBuzzSharp.NativeAssets.Linux/7.3.0.2": {
         "dependencies": {
-          "HarfBuzzSharp": "7.3.0.1"
+          "HarfBuzzSharp": "7.3.0.2"
         },
         "runtimeTargets": {
           "runtimes/linux-arm/native/libHarfBuzzSharp.so": {
@@ -1038,7 +1038,7 @@
           }
         }
       },
-      "HarfBuzzSharp.NativeAssets.macOS/7.3.0.1": {
+      "HarfBuzzSharp.NativeAssets.macOS/7.3.0.2": {
         "runtimeTargets": {
           "runtimes/osx/native/libHarfBuzzSharp.dylib": {
             "rid": "osx",
@@ -1047,7 +1047,7 @@
           }
         }
       },
-      "HarfBuzzSharp.NativeAssets.Win32/7.3.0.1": {
+      "HarfBuzzSharp.NativeAssets.Win32/7.3.0.2": {
         "runtimeTargets": {
           "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
             "rid": "win-arm64",
@@ -1695,14 +1695,14 @@
           "lib/net6.0/linq2db.dll": {}
         }
       },
-      "MailKit/4.5.0": {
+      "MailKit/4.6.0": {
         "dependencies": {
-          "MimeKit": "4.5.0"
+          "MimeKit": "4.6.0"
         },
         "runtime": {
           "lib/net8.0/MailKit.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.0"
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
           }
         },
         "compile": {
@@ -1749,31 +1749,31 @@
         }
       },
       "Microsoft.AspNetCore.DataProtection.Abstractions/3.1.32": {},
-      "Microsoft.AspNetCore.JsonPatch/8.0.4": {
+      "Microsoft.AspNetCore.JsonPatch/8.0.6": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.JsonPatch.dll": {
-            "assemblyVersion": "8.0.4.0",
-            "fileVersion": "8.0.424.17014"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26909"
           }
         },
         "compile": {
           "lib/net8.0/Microsoft.AspNetCore.JsonPatch.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.4": {
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.6": {
         "dependencies": {
-          "Microsoft.AspNetCore.JsonPatch": "8.0.4",
+          "Microsoft.AspNetCore.JsonPatch": "8.0.6",
           "Newtonsoft.Json": "13.0.3",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
-            "assemblyVersion": "8.0.4.0",
-            "fileVersion": "8.0.424.17014"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26909"
           }
         },
         "compile": {
@@ -1795,7 +1795,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/8.0.4": {
+      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/8.0.6": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.Extensions": "6.0.0",
           "Microsoft.CodeAnalysis.Razor": "6.0.0",
@@ -1803,8 +1803,8 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll": {
-            "assemblyVersion": "8.0.4.0",
-            "fileVersion": "8.0.424.17014"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26909"
           }
         },
         "compile": {
@@ -1967,11 +1967,11 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
-      "Microsoft.Data.SqlClient/5.2.0": {
+      "Microsoft.Data.SqlClient/5.2.1": {
         "dependencies": {
-          "Azure.Identity": "1.11.2",
+          "Azure.Identity": "1.11.4",
           "Microsoft.Data.SqlClient.SNI.runtime": "5.2.0",
-          "Microsoft.Identity.Client": "4.60.3",
+          "Microsoft.Identity.Client": "4.61.3",
           "Microsoft.IdentityModel.JsonWebTokens": "6.35.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.35.0",
           "Microsoft.SqlServer.Server": "1.0.0",
@@ -1981,7 +1981,7 @@
         "runtime": {
           "lib/net8.0/Microsoft.Data.SqlClient.dll": {
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.20.24059.2"
+            "fileVersion": "5.21.24152.3"
           }
         },
         "resources": {
@@ -2021,13 +2021,13 @@
             "rid": "unix",
             "assetType": "runtime",
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.20.24059.2"
+            "fileVersion": "5.21.24152.3"
           },
           "runtimes/win/lib/net8.0/Microsoft.Data.SqlClient.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.20.24059.2"
+            "fileVersion": "5.21.24152.3"
           }
         },
         "compile": {
@@ -2058,35 +2058,35 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/8.0.5": {
+      "Microsoft.EntityFrameworkCore/8.0.6": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.5",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.5",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.6",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.6",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "8.0.5.0",
-            "fileVersion": "8.0.524.21704"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26904"
           }
         },
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.5": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.6": {
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "8.0.5.0",
-            "fileVersion": "8.0.524.21704"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26904"
           }
         },
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.5": {},
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.6": {},
       "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
@@ -2101,24 +2101,24 @@
           "Microsoft.Extensions.Primitives": "8.0.0"
         }
       },
-      "Microsoft.Extensions.Caching.SqlServer/8.0.4": {
+      "Microsoft.Extensions.Caching.SqlServer/8.0.6": {
         "dependencies": {
-          "Azure.Identity": "1.11.2",
-          "Microsoft.Data.SqlClient": "5.2.0",
+          "Azure.Identity": "1.11.4",
+          "Microsoft.Data.SqlClient": "5.2.1",
           "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
           "Microsoft.Extensions.Options": "8.0.2"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Caching.SqlServer.dll": {
-            "assemblyVersion": "8.0.4.0",
-            "fileVersion": "8.0.424.17014"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26909"
           }
         },
         "compile": {
           "lib/net8.0/Microsoft.Extensions.Caching.SqlServer.dll": {}
         }
       },
-      "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.4": {
+      "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.6": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "8.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.1",
@@ -2127,8 +2127,8 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
-            "assemblyVersion": "8.0.4.0",
-            "fileVersion": "8.0.424.17014"
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.624.26909"
           }
         },
         "compile": {
@@ -2213,30 +2213,30 @@
         }
       },
       "Microsoft.Extensions.Primitives/8.0.0": {},
-      "Microsoft.Identity.Client/4.60.3": {
+      "Microsoft.Identity.Client/4.61.3": {
         "dependencies": {
           "Microsoft.IdentityModel.Abstractions": "6.35.0",
           "System.Diagnostics.DiagnosticSource": "7.0.2"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Identity.Client.dll": {
-            "assemblyVersion": "4.60.3.0",
-            "fileVersion": "4.60.3.0"
+            "assemblyVersion": "4.61.3.0",
+            "fileVersion": "4.61.3.0"
           }
         },
         "compile": {
           "lib/net6.0/Microsoft.Identity.Client.dll": {}
         }
       },
-      "Microsoft.Identity.Client.Extensions.Msal/4.60.3": {
+      "Microsoft.Identity.Client.Extensions.Msal/4.61.3": {
         "dependencies": {
-          "Microsoft.Identity.Client": "4.60.3",
+          "Microsoft.Identity.Client": "4.61.3",
           "System.Security.Cryptography.ProtectedData": "8.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
-            "assemblyVersion": "4.60.3.0",
-            "fileVersion": "4.60.3.0"
+            "assemblyVersion": "4.61.3.0",
+            "fileVersion": "4.61.3.0"
           }
         },
         "compile": {
@@ -2357,15 +2357,15 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
-      "MimeKit/4.5.0": {
+      "MimeKit/4.6.0": {
         "dependencies": {
-          "BouncyCastle.Cryptography": "2.3.0",
+          "BouncyCastle.Cryptography": "2.3.1",
           "System.Security.Cryptography.Pkcs": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/MimeKit.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.0"
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
           }
         },
         "compile": {
@@ -2513,14 +2513,14 @@
           "lib/netstandard2.1/Nito.Disposables.dll": {}
         }
       },
-      "Npgsql/8.0.2": {
+      "Npgsql/8.0.3": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
         },
         "runtime": {
           "lib/net8.0/Npgsql.dll": {
-            "assemblyVersion": "8.0.2.0",
-            "fileVersion": "8.0.2.0"
+            "assemblyVersion": "8.0.3.0",
+            "fileVersion": "8.0.3.0"
           }
         },
         "compile": {
@@ -2552,15 +2552,48 @@
           "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {}
         }
       },
-      "QuestPDF/2022.12.15": {
-        "dependencies": {
-          "SkiaSharp": "2.88.8",
-          "SkiaSharp.HarfBuzz": "2.88.7"
-        },
+      "QuestPDF/2024.3.10": {
         "runtime": {
           "lib/net8.0/QuestPDF.dll": {
-            "assemblyVersion": "2022.12.15.0",
-            "fileVersion": "2022.12.15.0"
+            "assemblyVersion": "2024.3.10.0",
+            "fileVersion": "2024.3.10.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/libQuestPdfSkia.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libQuestPdfSkia.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libQuestPdfSkia.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libQuestPdfSkia.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libQuestPdfSkia.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/QuestPdfSkia.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/QuestPdfSkia.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         },
         "compile": {
@@ -2652,15 +2685,15 @@
           "lib/net6.0/SkiaSharp.dll": {}
         }
       },
-      "SkiaSharp.HarfBuzz/2.88.7": {
+      "SkiaSharp.HarfBuzz/2.88.6": {
         "dependencies": {
-          "HarfBuzzSharp": "7.3.0.1",
+          "HarfBuzzSharp": "7.3.0.2",
           "SkiaSharp": "2.88.8"
         },
         "runtime": {
           "lib/net6.0/SkiaSharp.HarfBuzz.dll": {
             "assemblyVersion": "2.88.0.0",
-            "fileVersion": "2.88.7.0"
+            "fileVersion": "2.88.6.0"
           }
         },
         "compile": {
@@ -2769,7 +2802,7 @@
       "Svg.Skia/1.0.0.18": {
         "dependencies": {
           "SkiaSharp": "2.88.8",
-          "SkiaSharp.HarfBuzz": "2.88.7",
+          "SkiaSharp.HarfBuzz": "2.88.6",
           "Svg.Custom": "1.0.0.18",
           "Svg.Model": "1.0.0.18"
         },
@@ -3044,11 +3077,11 @@
           "ref/net6.0/System.Linq.Async.dll": {}
         }
       },
-      "System.Linq.Dynamic.Core/1.3.12": {
+      "System.Linq.Dynamic.Core/1.4.0": {
         "runtime": {
           "lib/net8.0/System.Linq.Dynamic.Core.dll": {
-            "assemblyVersion": "1.3.12.0",
-            "fileVersion": "1.3.12.0"
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
           }
         },
         "compile": {
@@ -3737,12 +3770,12 @@
           "Autofac.Extensions.DependencyInjection": "9.0.0",
           "Azure.Extensions.AspNetCore.DataProtection.Blobs": "1.3.4",
           "Azure.Extensions.AspNetCore.DataProtection.Keys": "1.2.3",
-          "Azure.Identity": "1.11.2",
+          "Azure.Identity": "1.11.4",
           "Humanizer": "2.14.1",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.4",
-          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "8.0.4",
-          "Microsoft.Extensions.Caching.SqlServer": "8.0.4",
-          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.4",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.6",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "8.0.6",
+          "Microsoft.Extensions.Caching.SqlServer": "8.0.6",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.6",
           "Nito.AsyncEx.Coordination": "5.1.2",
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Linq.Async": "6.0.1"
@@ -3757,11 +3790,11 @@
       "Nop.Data/4.70.0": {
         "dependencies": {
           "FluentMigrator": "5.2.0",
-          "FluentMigrator.Runner": "5.1.0",
-          "Microsoft.Data.SqlClient": "5.2.0",
+          "FluentMigrator.Runner": "5.2.0",
+          "Microsoft.Data.SqlClient": "5.2.1",
           "MySqlConnector": "2.3.7",
           "Nop.Core": "4.70.0",
-          "Npgsql": "8.0.2",
+          "Npgsql": "8.0.3",
           "System.Configuration.ConfigurationManager": "8.0.0",
           "System.Net.NameResolution": "4.3.0",
           "linq2db": "5.4.1"
@@ -3775,20 +3808,20 @@
       },
       "Nop.Services/4.70.0": {
         "dependencies": {
-          "Azure.Storage.Blobs": "12.19.1",
+          "Azure.Storage.Blobs": "12.20.0",
           "ClosedXML": "0.102.2",
           "Google.Apis.Auth": "1.68.0",
-          "HarfBuzzSharp.NativeAssets.Linux": "2.8.2.3",
-          "MailKit": "4.5.0",
+          "HarfBuzzSharp.NativeAssets.Linux": "7.3.0.2",
+          "MailKit": "4.6.0",
           "MaxMind.GeoIP2": "5.2.0",
-          "Microsoft.Identity.Client": "4.60.3",
+          "Microsoft.Identity.Client": "4.61.3",
           "Nop.Core": "4.70.0",
           "Nop.Data": "4.70.0",
-          "QuestPDF": "2022.12.15",
+          "QuestPDF": "2024.3.10",
           "SkiaSharp": "2.88.8",
           "SkiaSharp.NativeAssets.Linux.NoDependencies": "2.88.8",
           "Svg.Skia": "1.0.0.18",
-          "System.Linq.Dynamic.Core": "1.3.12",
+          "System.Linq.Dynamic.Core": "1.4.0",
           "System.ServiceModel.Http": "8.0.0"
         },
         "runtime": {
@@ -5671,12 +5704,12 @@
       "path": "automapper/13.0.1",
       "hashPath": "automapper.13.0.1.nupkg.sha512"
     },
-    "Azure.Core/1.38.0": {
+    "Azure.Core/1.39.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IuEgCoVA0ef7E4pQtpC3+TkPbzaoQfa77HlfJDmfuaJUCVJmn7fT0izamZiryW5sYUFKizsftIxMkXKbgIcPMQ==",
-      "path": "azure.core/1.38.0",
-      "hashPath": "azure.core.1.38.0.nupkg.sha512"
+      "sha512": "sha512-9vaV4ZICtVQp+2wjOKrIAjEjMzBkUohaBbKGqqcTW993MRfHA0N4L1BszQjWynS7lRvlYQLxaFK4wh9ewNm4HQ==",
+      "path": "azure.core/1.39.0",
+      "hashPath": "azure.core.1.39.0.nupkg.sha512"
     },
     "Azure.Extensions.AspNetCore.DataProtection.Blobs/1.3.4": {
       "type": "package",
@@ -5692,12 +5725,12 @@
       "path": "azure.extensions.aspnetcore.dataprotection.keys/1.2.3",
       "hashPath": "azure.extensions.aspnetcore.dataprotection.keys.1.2.3.nupkg.sha512"
     },
-    "Azure.Identity/1.11.2": {
+    "Azure.Identity/1.11.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mihECA1msfwdjTPXHwK9N3n4ln8jMB0DuT0r2caDGPriRT1vca4/Jgmo6FmFZPo8RQsQt1fVn1Gxv5WqkyHVeA==",
-      "path": "azure.identity/1.11.2",
-      "hashPath": "azure.identity.1.11.2.nupkg.sha512"
+      "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
+      "path": "azure.identity/1.11.4",
+      "hashPath": "azure.identity.1.11.4.nupkg.sha512"
     },
     "Azure.Security.KeyVault.Keys/4.2.0": {
       "type": "package",
@@ -5706,26 +5739,26 @@
       "path": "azure.security.keyvault.keys/4.2.0",
       "hashPath": "azure.security.keyvault.keys.4.2.0.nupkg.sha512"
     },
-    "Azure.Storage.Blobs/12.19.1": {
+    "Azure.Storage.Blobs/12.20.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x43hWFJ4sPQ23TD4piCwT+KlQpZT8pNDAzqj6yUCqh+WJ2qcQa17e1gh6ZOeT2QNFQTTDSuR56fm2bIV7i11/w==",
-      "path": "azure.storage.blobs/12.19.1",
-      "hashPath": "azure.storage.blobs.12.19.1.nupkg.sha512"
+      "sha512": "sha512-96HBFceJCwfv9Kg51F4C+MVIRhbAPtX2KupRaZqpGJW1FSWmo4JjOhi1sl3ZpZfPAiixYgTxhewMxSc/yd47/Q==",
+      "path": "azure.storage.blobs/12.20.0",
+      "hashPath": "azure.storage.blobs.12.20.0.nupkg.sha512"
     },
-    "Azure.Storage.Common/12.18.1": {
+    "Azure.Storage.Common/12.19.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ohCslqP9yDKIn+DVjBEOBuieB1QwsUCz+BwHYNaJ3lcIsTSiI4Evnq81HcKe8CqM8qvdModbipVQKpnxpbdWqA==",
-      "path": "azure.storage.common/12.18.1",
-      "hashPath": "azure.storage.common.12.18.1.nupkg.sha512"
+      "sha512": "sha512-aKW5fK4ZSQb9VjENSDbsQoKCDSG6d6mgsBA+groGoHyG2F38QCXThuwcmC7R1XLQOSIh28viE7CJw1BpNdl11A==",
+      "path": "azure.storage.common/12.19.0",
+      "hashPath": "azure.storage.common.12.19.0.nupkg.sha512"
     },
-    "BouncyCastle.Cryptography/2.3.0": {
+    "BouncyCastle.Cryptography/2.3.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IaVIiYxZLaBulveGDRUx/pBoW/Rc8QeXGF5u2E8xL8RWhVKCgfmtX9NUyGRbnSqnbFQU2zyP3MkXIdH+jUuQBw==",
-      "path": "bouncycastle.cryptography/2.3.0",
-      "hashPath": "bouncycastle.cryptography.2.3.0.nupkg.sha512"
+      "sha512": "sha512-buwoISwecYke3CmgG1AQSg+sNZjJeIb93vTAtJiHZX35hP/teYMxsfg0NDXGUKjGx6BKBTNKc77O2M3vKvlXZQ==",
+      "path": "bouncycastle.cryptography/2.3.1",
+      "hashPath": "bouncycastle.cryptography.2.3.1.nupkg.sha512"
     },
     "ClosedXML/0.102.2": {
       "type": "package",
@@ -5776,124 +5809,124 @@
       "path": "fluentmigrator.abstractions/5.2.0",
       "hashPath": "fluentmigrator.abstractions.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Extensions.MySql/5.1.0": {
+    "FluentMigrator.Extensions.MySql/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8dx8AS/XFs6HH7G3mw2FcDM43Y7+n96Z0OS9uQjmyum5Cv2Qp2dD2Gf747MCtbWbC/vdhJGomld+BnccBkNA3w==",
-      "path": "fluentmigrator.extensions.mysql/5.1.0",
-      "hashPath": "fluentmigrator.extensions.mysql.5.1.0.nupkg.sha512"
+      "sha512": "sha512-o7Ij1CYus5BtcPAWye0KkkGXBklm/fGb9Ap+RF7/aRYqgGWhA9lKWCyXP9euoY0TptwWI+YExs3R0ZfFhgXyIQ==",
+      "path": "fluentmigrator.extensions.mysql/5.2.0",
+      "hashPath": "fluentmigrator.extensions.mysql.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Extensions.Oracle/5.1.0": {
+    "FluentMigrator.Extensions.Oracle/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Cpnav//COP8wl/NVa7EYyiQAsF0lAba3NYizAWXq+vIApxyu5L9Cp6GpyCTgIIOR4QLTx3FXV4cCg7/QKXkHHA==",
-      "path": "fluentmigrator.extensions.oracle/5.1.0",
-      "hashPath": "fluentmigrator.extensions.oracle.5.1.0.nupkg.sha512"
+      "sha512": "sha512-bD2k9EdER2rc3hwtAiSS1ZVIVqoQTicEYDXkPLXpd266M3bW6auRzYNObfUo3EaZiyIB+ec8s4nX3Kan1J5Kkg==",
+      "path": "fluentmigrator.extensions.oracle/5.2.0",
+      "hashPath": "fluentmigrator.extensions.oracle.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Extensions.Postgres/5.1.0": {
+    "FluentMigrator.Extensions.Postgres/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-g3Se8v9zyjJUxFedx6mxCtCWrpr5IRD1BExyeIuvorJZZztE4emO/qXtpEB/m9YwdD8stJuPShbMWUa7bKm86Q==",
-      "path": "fluentmigrator.extensions.postgres/5.1.0",
-      "hashPath": "fluentmigrator.extensions.postgres.5.1.0.nupkg.sha512"
+      "sha512": "sha512-vfm0qR98kXUDtDrMG3keDsukQwcHZx+mVUkdCrf0K4nZ2OrlZnvvsreEttQb4Vy/TAArtOt9oHBDTNNeIM7juw==",
+      "path": "fluentmigrator.extensions.postgres/5.2.0",
+      "hashPath": "fluentmigrator.extensions.postgres.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Extensions.Snowflake/5.1.0": {
+    "FluentMigrator.Extensions.Snowflake/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3YnRq9q5AcShusF9OvbfMFu/Swyfn8V5YD/vkvAsNTcIIAWs4jXY0QhLR/lofIwvk56XqXE263x2OfzLZnf+gQ==",
-      "path": "fluentmigrator.extensions.snowflake/5.1.0",
-      "hashPath": "fluentmigrator.extensions.snowflake.5.1.0.nupkg.sha512"
+      "sha512": "sha512-jlXVIt3yYWU6ibF7NbZpqWkpRThGod4Gm14+pdINEQCwuqGQIrO8CWQ1iWCmdFLqskGa+gwCmyf48vUx/26qgA==",
+      "path": "fluentmigrator.extensions.snowflake/5.2.0",
+      "hashPath": "fluentmigrator.extensions.snowflake.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Extensions.SqlServer/5.1.0": {
+    "FluentMigrator.Extensions.SqlServer/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zdcQ1mYvyFY+gzfLScv5Y4j/qFXn4xLed71WqjiNWvN2/JkVh7Xa94K/b+PA6AYh8a7AIqdbnOKtzFr0Lh+95g==",
-      "path": "fluentmigrator.extensions.sqlserver/5.1.0",
-      "hashPath": "fluentmigrator.extensions.sqlserver.5.1.0.nupkg.sha512"
+      "sha512": "sha512-DEMbkq0fDoT41Wa1SLD8pJU7ZePV9/hwHW4a6J6r+e6Mp4cGNvFF4BMFqotlCTJdKGnbYCLPp89ZeELp+aKPfA==",
+      "path": "fluentmigrator.extensions.sqlserver/5.2.0",
+      "hashPath": "fluentmigrator.extensions.sqlserver.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner/5.1.0": {
+    "FluentMigrator.Runner/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jincYPtHyQjQ3XgQ7c8aPkKLX88HxueHdeSz++WDVo0LXnR4aFbvi/UXbtAsnwt+Jj06KFhF1DlYVOoT3yrhKQ==",
-      "path": "fluentmigrator.runner/5.1.0",
-      "hashPath": "fluentmigrator.runner.5.1.0.nupkg.sha512"
+      "sha512": "sha512-enB05nzvGZh+J8Mc6M8WFA+MbCP3HcjEE9Pzj6RjqwyLGOk5GrQxkWhHIVX3H/ALqUSuO49MldS+2vR/V7aaZg==",
+      "path": "fluentmigrator.runner/5.2.0",
+      "hashPath": "fluentmigrator.runner.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Core/5.1.0": {
+    "FluentMigrator.Runner.Core/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nP/3ezpP57wqt/1+NScrsSRiQj90xeaNjEyjFIekNtPzmGyM/z//AYk3MXtfM8so8b+JZNL5INQYgXaVGISD0Q==",
-      "path": "fluentmigrator.runner.core/5.1.0",
-      "hashPath": "fluentmigrator.runner.core.5.1.0.nupkg.sha512"
+      "sha512": "sha512-pDG6+rk3Q9XoPPKbF7KP4Fiv9RSfhy3qwtds0ymqdPyenbFZ7oe7gnMFZtSilYtuAzr0r0W6f8dYNJwOuVPkpw==",
+      "path": "fluentmigrator.runner.core/5.2.0",
+      "hashPath": "fluentmigrator.runner.core.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Db2/5.1.0": {
+    "FluentMigrator.Runner.Db2/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Z9CdgQnkyBgNyRpTA2le/VEQaa2ukFNqDYEqkRu2cOZk+XF3JsjkQMeeQB2Byy7yZhgK/SGrauLvebB5wF1wEw==",
-      "path": "fluentmigrator.runner.db2/5.1.0",
-      "hashPath": "fluentmigrator.runner.db2.5.1.0.nupkg.sha512"
+      "sha512": "sha512-9vGn0tU+X65Vrfv/RH6tUVDq4RL77zAq1ICik2mhEYKDLYxezU0yaJ2VoqB51xygr0Qoy90jV1AzE5Wy+e8agg==",
+      "path": "fluentmigrator.runner.db2/5.2.0",
+      "hashPath": "fluentmigrator.runner.db2.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Firebird/5.1.0": {
+    "FluentMigrator.Runner.Firebird/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lNFo+LZQczW3vtuSjpOfRxUhoRrwBMg+PV+SOk12c1PnkfvDAtsX/HSn9yUI3xV+fN1x6krBIwIQ9o63HQZAfg==",
-      "path": "fluentmigrator.runner.firebird/5.1.0",
-      "hashPath": "fluentmigrator.runner.firebird.5.1.0.nupkg.sha512"
+      "sha512": "sha512-9JNpw/9KxvvGCXYlcpy7H1VbEp0vbWMZzOppq+KZWhKbQoCa/fD1sUgEeGPbyIkgS+aaHMC6s4GceRvKzmsFYg==",
+      "path": "fluentmigrator.runner.firebird/5.2.0",
+      "hashPath": "fluentmigrator.runner.firebird.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Hana/5.1.0": {
+    "FluentMigrator.Runner.Hana/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xCRna1elZYhOITRK4uNtPb3xut0GTtteCyTjQF7ZlHC4RFFpg1a2fAWFUF+TB9YVeFxf1QHKhbo8Kr5rGH6HqA==",
-      "path": "fluentmigrator.runner.hana/5.1.0",
-      "hashPath": "fluentmigrator.runner.hana.5.1.0.nupkg.sha512"
+      "sha512": "sha512-LhdxNzkhXpyZg/tz1hG+mcntSyEMlroEd6JihXkdCIGulpPFZSSHAtS1KUao+t6urK/VTq2LhDEMwsoT7gd/7w==",
+      "path": "fluentmigrator.runner.hana/5.2.0",
+      "hashPath": "fluentmigrator.runner.hana.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.MySql/5.1.0": {
+    "FluentMigrator.Runner.MySql/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VywFX3gKQ7EcveKoLcxLwf8aQkWnJn6WQ2aJqe7Dw6gld8o0WBpevsBwQFO1doGqXzhFDlWHO2NwKoqvXQCG+Q==",
-      "path": "fluentmigrator.runner.mysql/5.1.0",
-      "hashPath": "fluentmigrator.runner.mysql.5.1.0.nupkg.sha512"
+      "sha512": "sha512-0KAxJwm2snQuDJIadaPwI1CYVJLgwXX761UubSX8kp2wXsBEIKUgmAlMdCoeE6RbHPBbv2ukS687xzeNSAaRsA==",
+      "path": "fluentmigrator.runner.mysql/5.2.0",
+      "hashPath": "fluentmigrator.runner.mysql.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Oracle/5.1.0": {
+    "FluentMigrator.Runner.Oracle/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qNmTirqFREMOm/HMkO68suXd3EIoadfQ69gvuJ5Hvy7LNQgMAW8FcrcGkNFn0t0JYAtGEbtH9t90/6dmBAwQIg==",
-      "path": "fluentmigrator.runner.oracle/5.1.0",
-      "hashPath": "fluentmigrator.runner.oracle.5.1.0.nupkg.sha512"
+      "sha512": "sha512-0hDshOJ0O1WPzo9dWbLtEBHe1eiXvIgPZpFctIUC7f7VjcWqzwfhW4x6qKPl0UQo84D2iTG08A9V34t4l0IWGQ==",
+      "path": "fluentmigrator.runner.oracle/5.2.0",
+      "hashPath": "fluentmigrator.runner.oracle.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Postgres/5.1.0": {
+    "FluentMigrator.Runner.Postgres/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Zr/cqR7b5PJqwO/JPtVz/zn2USO/jLz8b9JEFCjsYIb4AU8WIwNpLoRXsEcWSoHjlAc60LPcZM608tkgDGgA6A==",
-      "path": "fluentmigrator.runner.postgres/5.1.0",
-      "hashPath": "fluentmigrator.runner.postgres.5.1.0.nupkg.sha512"
+      "sha512": "sha512-T65P+1e5PKiUm2GTKLnodlDOraYR6vV/07U2P/T6+f4TCMBrRSgwGgGU7tp2dtCiValjJcRXnFSJsBMXiw6WeA==",
+      "path": "fluentmigrator.runner.postgres/5.2.0",
+      "hashPath": "fluentmigrator.runner.postgres.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Redshift/5.1.0": {
+    "FluentMigrator.Runner.Redshift/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7GTF2EaaU8de9ViLobwxSKT+gY81h6b4zXIkMteALdqnAjkMNcynhEradH5OaDe9PorKWWh3/VBzCmO+N516xw==",
-      "path": "fluentmigrator.runner.redshift/5.1.0",
-      "hashPath": "fluentmigrator.runner.redshift.5.1.0.nupkg.sha512"
+      "sha512": "sha512-Cn3i/rd1kPurX+6nsUAIHLiO4C8Hpm5CJBxwLWiIqxzMFsrrwnzBrDf3s7Tg+NVpicHozW7335Sv45+FSxec3Q==",
+      "path": "fluentmigrator.runner.redshift/5.2.0",
+      "hashPath": "fluentmigrator.runner.redshift.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.Snowflake/5.1.0": {
+    "FluentMigrator.Runner.Snowflake/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OmGfCxJPSrhJ6VcW6ypqc+NziwH1rygkNEJfW7Jl1DHfwrQtPgIgWw8qTA0abN+RkwtalXsfaEJ+4EuL0L+w6w==",
-      "path": "fluentmigrator.runner.snowflake/5.1.0",
-      "hashPath": "fluentmigrator.runner.snowflake.5.1.0.nupkg.sha512"
+      "sha512": "sha512-EPH8JyuHKQ0J+GSKBv+f1KWn2p0oFhB7vffsT/N/XrfPKW0NglDX4OOQtTt0LFaLJW2v92jZRX3eGCwY1w/MNA==",
+      "path": "fluentmigrator.runner.snowflake/5.2.0",
+      "hashPath": "fluentmigrator.runner.snowflake.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.SQLite/5.1.0": {
+    "FluentMigrator.Runner.SQLite/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5fADu6iWF9pnPKhI0S2VmdR8gaFFe4A+ZtAu57A9w8gcZCCPVzekye83+gm93XuAGxOQtT1RErVIy2T0aGcyYA==",
-      "path": "fluentmigrator.runner.sqlite/5.1.0",
-      "hashPath": "fluentmigrator.runner.sqlite.5.1.0.nupkg.sha512"
+      "sha512": "sha512-v3avIU7JpEKJGAQg+h3++DAiahxCJunC0ZHDOk1JeiAQxjg8yWGXCD2y2ePt4R+3Vatk1TrAURFCFuABPB6Tjw==",
+      "path": "fluentmigrator.runner.sqlite/5.2.0",
+      "hashPath": "fluentmigrator.runner.sqlite.5.2.0.nupkg.sha512"
     },
-    "FluentMigrator.Runner.SqlServer/5.1.0": {
+    "FluentMigrator.Runner.SqlServer/5.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WiZjICPJRIjuOZG2c52JOspKG0iR9UrfotE/SQMNlGEoIxjp8XrksEw7LytWsXWCymDjZUedNnA7QTqZS4p/Iw==",
-      "path": "fluentmigrator.runner.sqlserver/5.1.0",
-      "hashPath": "fluentmigrator.runner.sqlserver.5.1.0.nupkg.sha512"
+      "sha512": "sha512-Rc4UElDQp7k6DeDdZZ75lvf7oHHJfGJCohx72S6Y5YICFIrhGaOFBYHEuGqnNZgpQbtQAI0DtSR1hIKFJeTnpg==",
+      "path": "fluentmigrator.runner.sqlserver/5.2.0",
+      "hashPath": "fluentmigrator.runner.sqlserver.5.2.0.nupkg.sha512"
     },
     "FluentValidation/11.5.1": {
       "type": "package",
@@ -5937,33 +5970,33 @@
       "path": "google.apis.core/1.68.0",
       "hashPath": "google.apis.core.1.68.0.nupkg.sha512"
     },
-    "HarfBuzzSharp/7.3.0.1": {
+    "HarfBuzzSharp/7.3.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/6z6TQBqWWbVpLUw7E/82HZKLT3OAzg/w6z8I6JFNFcYa3nM9RnZ8XGos9nD4buAzThLHpqPw/rb8FdZXEORAQ==",
-      "path": "harfbuzzsharp/7.3.0.1",
-      "hashPath": "harfbuzzsharp.7.3.0.1.nupkg.sha512"
+      "sha512": "sha512-0tCd6HyCmNsX/DniCp2b00fo0xPbdNwKOs9BxxyT8oOOuMlWjcSFwzONKyeckCKVBFEsbSmsAHPDTqxoSDwZMg==",
+      "path": "harfbuzzsharp/7.3.0.2",
+      "hashPath": "harfbuzzsharp.7.3.0.2.nupkg.sha512"
     },
-    "HarfBuzzSharp.NativeAssets.Linux/2.8.2.3": {
+    "HarfBuzzSharp.NativeAssets.Linux/7.3.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Qu1yJSHEN7PD3+fqfkaClnORWN5e2xJ2Xoziz/GUi/oBT1Z+Dp2oZeiONKP6NFltboSOBkvH90QuOA6YN/U1zg==",
-      "path": "harfbuzzsharp.nativeassets.linux/2.8.2.3",
-      "hashPath": "harfbuzzsharp.nativeassets.linux.2.8.2.3.nupkg.sha512"
+      "sha512": "sha512-aKa5J1RqjXKAtdcZJp5wjC78klfBIzJHM6CneN76lFmQ9LLRJA9Oa0TkIDaV8lVLDKMAy5fCKHXFlXUK1YfL/g==",
+      "path": "harfbuzzsharp.nativeassets.linux/7.3.0.2",
+      "hashPath": "harfbuzzsharp.nativeassets.linux.7.3.0.2.nupkg.sha512"
     },
-    "HarfBuzzSharp.NativeAssets.macOS/7.3.0.1": {
+    "HarfBuzzSharp.NativeAssets.macOS/7.3.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4i6e8WhXF04At1rZ904xjt5g10W86u6B2SpzWAw+cfY4mzfyUV0hgZHIWsE6PsW8a9bP/bSdsZx/Rt4UIroi4w==",
-      "path": "harfbuzzsharp.nativeassets.macos/7.3.0.1",
-      "hashPath": "harfbuzzsharp.nativeassets.macos.7.3.0.1.nupkg.sha512"
+      "sha512": "sha512-nycYH/WLJ6ogm+I+QSFCdPJsdxSb5GANWYbQyp1vsd/KjXN56RVUJWPhbgP2GKb/Y7mrsHM7EProqVXlO/EMsA==",
+      "path": "harfbuzzsharp.nativeassets.macos/7.3.0.2",
+      "hashPath": "harfbuzzsharp.nativeassets.macos.7.3.0.2.nupkg.sha512"
     },
-    "HarfBuzzSharp.NativeAssets.Win32/7.3.0.1": {
+    "HarfBuzzSharp.NativeAssets.Win32/7.3.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NxzjhGcY7fYCu51BsanQurXXyqGogZiMzFBpDrZg49jNhT/S0QWYe/uvmP9YbwagprKQ+2tbGT0cw1BvxJciXQ==",
-      "path": "harfbuzzsharp.nativeassets.win32/7.3.0.1",
-      "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.1.nupkg.sha512"
+      "sha512": "sha512-DpF9JBzwws2dupOLnjME65hxQWWbN/GD40AoTkwB4S05WANvxo3n81AnQJKxWDCnrWfWhLPB36OF27TvEqzb/A==",
+      "path": "harfbuzzsharp.nativeassets.win32/7.3.0.2",
+      "hashPath": "harfbuzzsharp.nativeassets.win32.7.3.0.2.nupkg.sha512"
     },
     "Humanizer/2.14.1": {
       "type": "package",
@@ -6343,12 +6376,12 @@
       "path": "linq2db/5.4.1",
       "hashPath": "linq2db.5.4.1.nupkg.sha512"
     },
-    "MailKit/4.5.0": {
+    "MailKit/4.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EaXHODUdIV5oPdWvBJGazwaEpKt1LI/H/S//EEozANYCsfOSKHntX+Skk2kW616lSQp+fkRTmSjk0CYxEuOyEA==",
-      "path": "mailkit/4.5.0",
-      "hashPath": "mailkit.4.5.0.nupkg.sha512"
+      "sha512": "sha512-EJ1L2AtoO9nGZz2AKl2WGGw4pLIpkgEwzpczmZWBLqX0m33ueVA+CJYd9hg52XOvvEj+w5PVzB7yy26E0WHzKQ==",
+      "path": "mailkit/4.6.0",
+      "hashPath": "mailkit.4.6.0.nupkg.sha512"
     },
     "MaxMind.Db/4.1.0": {
       "type": "package",
@@ -6385,19 +6418,19 @@
       "path": "microsoft.aspnetcore.dataprotection.abstractions/3.1.32",
       "hashPath": "microsoft.aspnetcore.dataprotection.abstractions.3.1.32.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.JsonPatch/8.0.4": {
+    "Microsoft.AspNetCore.JsonPatch/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8iy7uza6GTuE5GadOryGfsGuA8xP1RTs16zqdXF5gM0b8iDfyNWnyDmatY5cZhXE1kJiko0S7s1T/gNFdIZ7Zg==",
-      "path": "microsoft.aspnetcore.jsonpatch/8.0.4",
-      "hashPath": "microsoft.aspnetcore.jsonpatch.8.0.4.nupkg.sha512"
+      "sha512": "sha512-f23867xv+b5Cps3G2WDqjx3JjluLdR/TxfVI9sqk3d1ceQgOSD1WrqrQA66frdd5eQq+uqTGRReq1OQhQqodWQ==",
+      "path": "microsoft.aspnetcore.jsonpatch/8.0.6",
+      "hashPath": "microsoft.aspnetcore.jsonpatch.8.0.6.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.4": {
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lhJq0JjrlGZQwQoYrpVbokhb1AlgLGxI3QacSyKgCNOXTNwCi0pUnMR7NrfON20DkL90Kqqyl3wDrLbRaRgcsA==",
-      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/8.0.4",
-      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.8.0.4.nupkg.sha512"
+      "sha512": "sha512-AOoi7cmh2yTVHMNMRYEfAj26NCOur9pd70GSXaDNJvVtD7e/I9UddIkwnj7HAWKtUn2EUOzSKCpt/RZllYiO5w==",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/8.0.6",
+      "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.8.0.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
       "type": "package",
@@ -6406,12 +6439,12 @@
       "path": "microsoft.aspnetcore.mvc.razor.extensions/6.0.0",
       "hashPath": "microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/8.0.4": {
+    "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-876m+YvEo+rjbZNQv64RhOBtWVD08bOwT/g96G0cBm+810WiSR3f5C79XG+W59PuvF6JLGFz+IXYLHCjLCvOrQ==",
-      "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/8.0.4",
-      "hashPath": "microsoft.aspnetcore.mvc.razor.runtimecompilation.8.0.4.nupkg.sha512"
+      "sha512": "sha512-yRQHMZwLwtc8FYEVMhqc8K5oLWPzRx8/Kpjt409VNu3AyXTkRzLpBHBIs8f9jkiIEb92QBqCoGxiyZVJ3Xq5BA==",
+      "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/8.0.6",
+      "hashPath": "microsoft.aspnetcore.mvc.razor.runtimecompilation.8.0.6.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.0": {
       "type": "package",
@@ -6462,12 +6495,12 @@
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
-    "Microsoft.Data.SqlClient/5.2.0": {
+    "Microsoft.Data.SqlClient/5.2.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3alfyqRN3ELRtdvU1dGtLBRNQqprr3TJ0WrUJfMISPwg1nPUN2P3Lelah68IKWuV27Ceb7ig95hWNHFTSXfxMg==",
-      "path": "microsoft.data.sqlclient/5.2.0",
-      "hashPath": "microsoft.data.sqlclient.5.2.0.nupkg.sha512"
+      "sha512": "sha512-ojg2XWmih4ubPPtrhRqqXk0SM6wC2ZSTkNNEAlYBhMo4IsRHjLazFc0abzcZCNfw1JyWcqY7vGutWTv8ZaFD9g==",
+      "path": "microsoft.data.sqlclient/5.2.1",
+      "hashPath": "microsoft.data.sqlclient.5.2.1.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient.SNI.runtime/5.2.0": {
       "type": "package",
@@ -6476,26 +6509,26 @@
       "path": "microsoft.data.sqlclient.sni.runtime/5.2.0",
       "hashPath": "microsoft.data.sqlclient.sni.runtime.5.2.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/8.0.5": {
+    "Microsoft.EntityFrameworkCore/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sqpDZgfzmTPXy/jCekqTaPDwqRDjtdGmIL+eqFfXtVAoH4AanWjeyxQ1ej3uVnTQO6f23+m9+ggJDVcgyPJxcA==",
-      "path": "microsoft.entityframeworkcore/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.8.0.5.nupkg.sha512"
+      "sha512": "sha512-Ms5e5QuBAjVIuQsGumeLvkgMiOpnj6wxPvwBIoe1NfTkseWK4NZYztnhgDlpkCPkrUmJEXLv69kl349Ours30Q==",
+      "path": "microsoft.entityframeworkcore/8.0.6",
+      "hashPath": "microsoft.entityframeworkcore.8.0.6.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.5": {
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qwYdfjFKtmTXX8NIm0MuZxUkon1tcw+aF5huzR7YOVr/tR3s4fqw9DWcvc23l3Jhpo/uGHWZcNPyFlI2CD3Usg==",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.5.nupkg.sha512"
+      "sha512": "sha512-X7wSSBNFRuN8j8M9HDYG7rPpEeyhY+PdJZR9rftmgvsZH0eK5+bZ3b3As8iO4rLEpjsBzDnrgSIY6q2F3HQatw==",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.6",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.5": {
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LzoKedC+9A8inF5d3iIzgyv/JDXgKrtpYoGIC3EqGWuHVDm9s/IHHApeTOTbzvnr7yBVV+nmYfyT1nwtzRDp0Q==",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.5",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.5.nupkg.sha512"
+      "sha512": "sha512-fDNtuQ4lAaPaCOlsrwUck/GvnF4QLeDpMmE1L5QtxZpMSmWfnL2/vk8sDL9OVTWcfprooI9V5MNpIx3/Tq5ehg==",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.6",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
       "type": "package",
@@ -6511,19 +6544,19 @@
       "path": "microsoft.extensions.caching.memory/8.0.0",
       "hashPath": "microsoft.extensions.caching.memory.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Caching.SqlServer/8.0.4": {
+    "Microsoft.Extensions.Caching.SqlServer/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Sp3d4JTCC9KRXIRJLvJslKd+UVo4Yffsg9USydEgik71eUWnX88qknDLztxL1kGmLyT4WbG6y0XSLcthw50snQ==",
-      "path": "microsoft.extensions.caching.sqlserver/8.0.4",
-      "hashPath": "microsoft.extensions.caching.sqlserver.8.0.4.nupkg.sha512"
+      "sha512": "sha512-iRqe1ZU7JvPzSXZfjg9DTvGlMFyleJY9ZnU4clrmaEZx4TjlSkzKB4T7Ir+s6UN6wVTNxVuMsSv5LVnN14N00Q==",
+      "path": "microsoft.extensions.caching.sqlserver/8.0.6",
+      "hashPath": "microsoft.extensions.caching.sqlserver.8.0.6.nupkg.sha512"
     },
-    "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.4": {
+    "Microsoft.Extensions.Caching.StackExchangeRedis/8.0.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tfhJyJXVY6EpimYbDPrf7P2PerJZ/EWTjEbailE2+uEpETYKKPHAZA35TnZKxqPpOxzAlVyPE33hdgP1HU8B7A==",
-      "path": "microsoft.extensions.caching.stackexchangeredis/8.0.4",
-      "hashPath": "microsoft.extensions.caching.stackexchangeredis.8.0.4.nupkg.sha512"
+      "sha512": "sha512-fMURqUIykCP6nhG/hVnhCQGRgUMAIBmU8nx1bJdWc4p0UbrmQFN6JVgfNuje9/5xsFA8Nqaw/WCe8tX9W0hEzQ==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/8.0.6",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.8.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
       "type": "package",
@@ -6602,19 +6635,19 @@
       "path": "microsoft.extensions.primitives/8.0.0",
       "hashPath": "microsoft.extensions.primitives.8.0.0.nupkg.sha512"
     },
-    "Microsoft.Identity.Client/4.60.3": {
+    "Microsoft.Identity.Client/4.61.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jve1RzmSpBhGlqMzPva6VfRbLMLZZc1Q8WRVZf8+iEruQkBgDTJPq8OeTehcY4GGYG1j6UB1xVofVE+n4BLDdw==",
-      "path": "microsoft.identity.client/4.60.3",
-      "hashPath": "microsoft.identity.client.4.60.3.nupkg.sha512"
+      "sha512": "sha512-naJo/Qm35Caaoxp5utcw+R8eU8ZtLz2ALh8S+gkekOYQ1oazfCQMWVT4NJ/FnHzdIJlm8dMz0oMpMGCabx5odA==",
+      "path": "microsoft.identity.client/4.61.3",
+      "hashPath": "microsoft.identity.client.4.61.3.nupkg.sha512"
     },
-    "Microsoft.Identity.Client.Extensions.Msal/4.60.3": {
+    "Microsoft.Identity.Client.Extensions.Msal/4.61.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X1Cz14/RbmlLshusE5u2zfG+5ul6ttgou19BZe5Mdw1qm6fgOI9/imBB2TIsx2UD7nkgd2+MCSzhbukZf7udeg==",
-      "path": "microsoft.identity.client.extensions.msal/4.60.3",
-      "hashPath": "microsoft.identity.client.extensions.msal.4.60.3.nupkg.sha512"
+      "sha512": "sha512-PWnJcznrSGr25MN8ajlc2XIDW4zCFu0U6FkpaNLEWLgd1NgFCp5uDY3mqLDgM8zCN8hqj8yo5wHYfLB2HjcdGw==",
+      "path": "microsoft.identity.client.extensions.msal/4.61.3",
+      "hashPath": "microsoft.identity.client.extensions.msal.4.61.3.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Abstractions/6.35.0": {
       "type": "package",
@@ -6693,12 +6726,12 @@
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
     },
-    "MimeKit/4.5.0": {
+    "MimeKit/4.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OYn8b8b66J4mgtDzoImepiUtdkJOAVGoTj/ghzJ+az4wVixA5L5Z8GmgFhRvQ1btAIwZh/d9zvZLCALndQdz5w==",
-      "path": "mimekit/4.5.0",
-      "hashPath": "mimekit.4.5.0.nupkg.sha512"
+      "sha512": "sha512-M4jddPQNSClTzHE+HnfrtN93mCXSYF8KewWUTwzXgl49ajzUh8hz/UY4CAnRQR4YJF3lBY5P+r+73VXZAGKafw==",
+      "path": "mimekit/4.6.0",
+      "hashPath": "mimekit.4.6.0.nupkg.sha512"
     },
     "MySqlConnector/2.3.7": {
       "type": "package",
@@ -6756,12 +6789,12 @@
       "path": "nito.disposables/2.2.1",
       "hashPath": "nito.disposables.2.2.1.nupkg.sha512"
     },
-    "Npgsql/8.0.2": {
+    "Npgsql/8.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MuJzLoWCaQhQAR3oh66YR0Ir6mxuezncGX3f8wxvAc21g0+9HICktJQlqMoODhxztZKXE5k9GxRxqUAN+vPb4g==",
-      "path": "npgsql/8.0.2",
-      "hashPath": "npgsql.8.0.2.nupkg.sha512"
+      "sha512": "sha512-6WEmzsQJCZAlUG1pThKg/RmeF6V+I0DmBBBE/8YzpRtEzhyZzKcK7ulMANDm5CkxrALBEC8H+5plxHWtIL7xnA==",
+      "path": "npgsql/8.0.3",
+      "hashPath": "npgsql.8.0.3.nupkg.sha512"
     },
     "NUglify/1.21.4": {
       "type": "package",
@@ -6777,12 +6810,12 @@
       "path": "pipelines.sockets.unofficial/2.2.8",
       "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
     },
-    "QuestPDF/2022.12.15": {
+    "QuestPDF/2024.3.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KryAKu3WX+KM4pF4Dpn6ycu+7fN2GhtwViuV82CjnxtQ3DpIbRN9PG4lMwICCugyQKStyXSwZZ2UIAeeuKNIew==",
-      "path": "questpdf/2022.12.15",
-      "hashPath": "questpdf.2022.12.15.nupkg.sha512"
+      "sha512": "sha512-AMvGTBBcQBcFX6az4uORt3CKsL6z6f26WnZdeZhCUcGF/p+5zQf9am0Y4DwNl7+JljuiNs4aC2QNflY5l50FtA==",
+      "path": "questpdf/2024.3.10",
+      "hashPath": "questpdf.2024.3.10.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -6917,12 +6950,12 @@
       "path": "skiasharp/2.88.8",
       "hashPath": "skiasharp.2.88.8.nupkg.sha512"
     },
-    "SkiaSharp.HarfBuzz/2.88.7": {
+    "SkiaSharp.HarfBuzz/2.88.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4Vd+GpokorZNpDvUp09zjK6CMXN35zyJtNvzkGtS1TsXlG/5yA3lWTsQIU0nSQjfgpYql0tSEU5+WTsjxljugg==",
-      "path": "skiasharp.harfbuzz/2.88.7",
-      "hashPath": "skiasharp.harfbuzz.2.88.7.nupkg.sha512"
+      "sha512": "sha512-s5yZTHdqbXKiTL06ns6zW3asELfX60dEceA4ZdYmNlOkz/OyWDfdjHAuu4HGDA7Mxx5iaUEzDZgPkEe+OVr/jg==",
+      "path": "skiasharp.harfbuzz/2.88.6",
+      "hashPath": "skiasharp.harfbuzz.2.88.6.nupkg.sha512"
     },
     "SkiaSharp.NativeAssets.Linux.NoDependencies/2.88.8": {
       "type": "package",
@@ -7190,12 +7223,12 @@
       "path": "system.linq.async/6.0.1",
       "hashPath": "system.linq.async.6.0.1.nupkg.sha512"
     },
-    "System.Linq.Dynamic.Core/1.3.12": {
+    "System.Linq.Dynamic.Core/1.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uriIEVgq1Wp1wcGohFkS4VESynM2za9BhCH/Vtaxtq8cwvRCobjq9ZLnCrzRLwtJqexKRaH2ItBZwuMRISsclw==",
-      "path": "system.linq.dynamic.core/1.3.12",
-      "hashPath": "system.linq.dynamic.core.1.3.12.nupkg.sha512"
+      "sha512": "sha512-R96BivaBWI3rwU2EHdj9Gn1TavlJS8W476iRtwStgmsAoe3uRuo1IWqiVdjlEbEetQ/bxOni8BHabQBA0yveTw==",
+      "path": "system.linq.dynamic.core/1.4.0",
+      "hashPath": "system.linq.dynamic.core.1.4.0.nupkg.sha512"
     },
     "System.Linq.Expressions/4.3.0": {
       "type": "package",

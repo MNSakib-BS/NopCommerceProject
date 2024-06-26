@@ -1,0 +1,45 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models;
+@using Nop.Core;
+@using Nop.Services.Common;
+@model DeliverySchedulingOrderModel
+
+@{
+    @inject IGenericAttributeService genericAttributeService
+    @inject IWorkContext workContext
+
+    const string hideNotesBlockAttributeName = "OrderPage.HideDeliveryScheduling";
+    var hideNotesBlock = genericAttributeService.GetAttributeAsync<bool>(workContext.CurrentCustomer, hideNotesBlockAttributeName);
+}
+
+<nop-panel asp-name="order-delivery-date-time" asp-icon="fa fa-info" asp-title="@T("Resanehlab.Plugin.OrderFulfillment.DeliveryScheduling.Orders.DeliveryScheduling")" asp-hide-block-attribute-name="@hideNotesBlockAttributeName" asp-hide="@hideNotesBlock" asp-advanced="true">
+    <div class="panel-body">
+        <div class="panel panel-default sub-panel">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="DeliveryTimeRange" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-text-row">@Model.DeliveryTimeRange</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="DeliveryTime" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-text-row">@Model.DeliveryTime</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ShippingMethodName" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="form-text-row">@Model.ShippingMethodName</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nop-panel>

@@ -1,0 +1,141 @@
+﻿@model ConfigurationModel
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="CustomThemeColor_OverrideForStore" asp-input="CustomThemeColor" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="CustomThemeColor" />
+                </div>
+                <div class="col-sm-8">
+                    <nop-editor asp-for="CustomThemeColor" readonly />
+                    <div id="color-picker"></div>
+
+                    <span asp-validation-for="CustomThemeColor"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="AccentThemeColor_OverrideForStore" asp-input="AccentThemeColor" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="AccentThemeColor" />
+                </div>
+                <div class="col-sm-8">
+                    <nop-editor asp-for="AccentThemeColor" readonly />
+                    <div id="accent-color-picker"></div>
+                    <span asp-validation-for="AccentThemeColor"></span>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $('#color-picker').farbtastic('#@Html.IdFor(model => model.CustomThemeColor)');
+                    $('#accent-color-picker').farbtastic('#@Html.IdFor(model => model.AccentThemeColor)');
+                });
+            </script>
+
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="EnableImageLazyLoad_OverrideForStore" asp-input="EnableImageLazyLoad" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableImageLazyLoad" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="EnableImageLazyLoad" />
+                    <span asp-validation-for="EnableImageLazyLoad"></span>
+                </div>
+            </div>
+            <div class="form-group" id="pnlLazyLoadPictureId">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="LazyLoadPictureId_OverrideForStore" asp-input="LazyLoadPictureId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="LazyLoadPictureId" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="LazyLoadPictureId" />
+                    <span asp-validation-for="LazyLoadPictureId"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="ShowSupportedCardsPictureAtPageFooter_OverrideForStore" asp-input="ShowSupportedCardsPictureAtPageFooter" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="ShowSupportedCardsPictureAtPageFooter" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="ShowSupportedCardsPictureAtPageFooter" />
+                    <span asp-validation-for="ShowSupportedCardsPictureAtPageFooter"></span>
+                </div>
+            </div>
+            <div class="form-group" id="pnlSupportedCardsPictureId">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="SupportedCardsPictureId_OverrideForStore" asp-input="SupportedCardsPictureId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="SupportedCardsPictureId" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="SupportedCardsPictureId" />
+                    <span asp-validation-for="SupportedCardsPictureId"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="ShowLoginPictureAtLoginPage_OverrideForStore" asp-input="ShowLoginPictureAtLoginPage" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="ShowLoginPictureAtLoginPage" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="ShowLoginPictureAtLoginPage" />
+                    <span asp-validation-for="ShowLoginPictureAtLoginPage"></span>
+                </div>
+            </div>
+            <div class="form-group" id="pnlLoginPictureId">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="LoginPictureId_OverrideForStore" asp-input="LoginPictureId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="LoginPictureId" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="LoginPictureId" />
+                    <span asp-validation-for="LoginPictureId"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="ShowLogoAtPageFooter_OverrideForStore" asp-input="ShowLogoAtPageFooter" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="ShowLogoAtPageFooter" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="ShowLogoAtPageFooter" />
+                    <span asp-validation-for="ShowLogoAtPageFooter"></span>
+                </div>
+            </div>
+            <div class="form-group" id="pnlFooterLogoPictureId">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="FooterLogoPictureId_OverrideForStore" asp-input="FooterLogoPictureId" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="FooterLogoPictureId" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="FooterLogoPictureId" />
+                    <span asp-validation-for="FooterLogoPictureId"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="FooterEmail_OverrideForStore" asp-input="FooterEmail" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="FooterEmail" />
+                </div>
+                <div class="col-md-8">
+                    <nop-editor asp-for="FooterEmail" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">
+                    <nop-override-store-checkbox asp-for="CustomCss_OverrideForStore" asp-input="CustomCss" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="CustomCss" />
+                </div>
+                <div class="col-md-8">
+                    <nop-textarea asp-for="CustomCss" rows="10"></nop-textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,242 @@
+﻿@using Spinnaker.Plugin.Arch.Shipping.DeliveryScheduling.Models;
+@model AvailableDeliveryDateTimeModel
+
+<style>
+    .date-container {
+        display: flex;
+    }
+
+    .delivery-date-drop-down-container {
+        margin-right: 20px;
+    }
+
+    .delivery-date-dropdown,
+    .time-slot-drop-down {
+        font-size: 16px;
+        color: #034EA2;
+        text-transform: uppercase;
+        cursor: pointer;
+        min-width: max-content;
+        color: #034EA2;
+        padding: 5px 0px;
+        border: 1px solid #4F76BA;
+        cursor: pointer;
+        font-weight: 500;
+        text-align: center !important;
+        padding: 5px 0px;
+        margin-bottom: 14px;
+    }
+
+
+    .delivery-date-selector,
+    .time-slot-selector {
+        border: 1px solid #E3E9EC;
+        font-size: 16px;
+        color: #034EA2;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        min-width: max-content;
+        padding: 19px 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        display: flex;
+    }
+
+    .delivery-schedule-header {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18.75px;
+        text-align: left;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+</style>
+<div class="delivery-schedule-header">WHEN DO YOU WANT TO RECEIVE IT?</div>
+<div class="date-container">
+
+    @if (Model.DeliveryDates.Any())
+    {
+        var firstDeliveryDate = Model.DeliveryDates.FirstOrDefault();
+        <div class="delivery-date-drop-down-container">
+            <div class="delivery-date-selector">
+                <div id="delivery-day-@firstDeliveryDate.Date"
+                     data-day-of-week="@firstDeliveryDate.DayOfMonth"
+                     class="selected-delivery-date">
+                    @firstDeliveryDate.Date
+
+                </div>
+                <span style="margin-left: 10px;" class="arrow-drop-down-schedule arrow-drop-down-deliver-picker"></span>
+            </div>
+
+            @foreach (var deliveryDate in Model.DeliveryDates)
+            {
+                <div id="delivery-day-@deliveryDate.DayOfMonth" class="delivery-date-dropdown">@deliveryDate.Date</div>
+            }
+        </div>
+
+
+
+        if (firstDeliveryDate.TimeSlots.Any())
+        {
+            var firstTimeSlot = firstDeliveryDate.TimeSlots.FirstOrDefault();
+            <div>
+                <div class="time-slot-selector">
+                    <div id="time-slot-@firstTimeSlot.DayOfMonth"
+                         data-day="@firstTimeSlot.DayOfMonth"
+                         data-shipping-method-id="@firstTimeSlot.ShippingMethodId"
+                         data-shipping-method-capacity-id="@firstTimeSlot.ShippingMethodCapacityId"
+                         data-available-delivery-time-range-id="@firstTimeSlot.AvailableDeliveryTimeRangeId"
+                         data-available-delivery-date-time-range-id="@firstTimeSlot.AvailableDeliveryDateTimeRangeId"
+                         class="selected-time-slot">
+                        @firstTimeSlot.Time
+
+                    </div>
+                    <span style="margin-left: 10px;" class="clock-drop-down-schedule arrow-drop-down-deliver-picker"></span>
+                </div>
+
+                @foreach (var deliveryDate in Model.DeliveryDates)
+                {
+                    @foreach (var timeSlot in deliveryDate.TimeSlots)
+                    {
+                        if (timeSlot.DayOfMonth == deliveryDate.DayOfMonth)
+                        {
+                            <div data-day="@timeSlot.DayOfMonth"
+                                 data-shipping-method-id="@timeSlot.ShippingMethodId"
+                                 data-shipping-method-capacity-id="@timeSlot.ShippingMethodCapacityId"
+                                 data-available-delivery-time-range-id="@timeSlot.AvailableDeliveryTimeRangeId"
+                                 data-available-delivery-date-time-range-id="@timeSlot.AvailableDeliveryDateTimeRangeId"
+                                 class="time-slot-drop-down">
+                                @timeSlot.Time
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        }
+    }
+
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        let selectedTimeSlot = $(".selected-time-slot");
+        let shippingMethodCapacityId = selectedTimeSlot.data('shipping-method-capacity-id');
+        let availableDeliveryTimeRangeId = selectedTimeSlot.data('available-delivery-time-range-id');
+        let shippingMethodId = selectedTimeSlot.data('shipping-method-id');
+        updateSelectedSlotData();
+
+
+        $(".shipping-method-next-step-button")[0].onclick = null;
+        $(".shipping-method-next-step-button").off("click");
+
+        $('.shipping-method-next-step-button[onclick]').each(function () {
+            $(this).data('onclick', this.onclick);
+
+            this.onclick = function (event) {
+                let shippingMethodCapacityIdInt = parseInt(shippingMethodCapacityId, 10);
+                let availableDeliveryTimeRangeIdInt = parseInt(availableDeliveryTimeRangeId, 10);
+                let deliveryTime = $(".selected-time-slot").text().trim();
+                let selectedDate = $(".selected-delivery-date").text().trim();
+
+                $.ajax({
+                    url: '@Url.Action("CheckAvailabilityForSelectedDateTimes", "DeliveryScheduling")',
+                    data:
+                    {
+                        shippingMethodCapacityId: shippingMethodCapacityIdInt,
+                        deliveryDateOnUtc: selectedDate,
+                        availableDeliveryTimeRangeId: availableDeliveryTimeRangeId,
+                        deliveryTime: deliveryTime,
+                        selectedShippingOption: shippingMethodId
+                    },
+                    type: 'post',
+                    success: function (data) {
+                        console.log(data);
+                        if (data.Success) {
+                            ShippingMethod.save()
+                        }
+                        else {
+                            return false;
+                        }
+                    },
+                    complete: {},
+                    error: function (data) {
+                        alert('Error happend!');
+                        return false;
+                    },
+                });
+
+            }
+        });
+
+
+
+        var initialDayOfTheWeek = '@Model.DeliveryDates.FirstOrDefault().TimeSlots.FirstOrDefault().DayOfMonth';
+        $(".selected-time-slot").attr('id', 'time-slot-' + initialDayOfTheWeek);
+        // Initially hide the dropdowns
+        $(".delivery-date-dropdown, .time-slot-drop-down").hide();
+
+        $(".selected-delivery-date").click(function () {
+            $(".delivery-date-dropdown").toggle();
+
+        });
+
+        $(".delivery-date-dropdown").click(function () {
+            var selectedDate = $(this).text();
+            var selectedDay = $(this).attr('id').split('-')[2];
+            $(".selected-delivery-date").text(selectedDate)
+                .attr('id', 'delivery-day-' + selectedDay)
+                .data('day-of-week', selectedDay);
+            $(".delivery-date-dropdown, .time-slot-drop-down").hide();
+
+            var $matchingTimeSlot = $(".time-slot-drop-down[data-day='" + selectedDay + "']").first();
+            $(".selected-time-slot").text($matchingTimeSlot.text())
+                .data('shipping-method-capacity-id', $matchingTimeSlot.data('shipping-method-capacity-id'))
+                .data('available-delivery-time-range-id', $matchingTimeSlot.data('available-delivery-time-range-id'))
+                .data('shipping-method-id', $matchingTimeSlot.data('shipping-method-id'));
+
+            selectedTimeSlot = $(".selected-time-slot");
+            updateSelectedSlotData();
+        });
+
+        $(".selected-time-slot").click(function () {
+
+            var selectedDay = $(".selected-delivery-date").data('day-of-week');
+            var $timeSlotDropDowns = $(".time-slot-drop-down[data-day='" + selectedDay + "']");
+            if ($timeSlotDropDowns.is(":visible")) {
+                $timeSlotDropDowns.hide();
+
+            } else {
+                $(".time-slot-drop-down").hide();
+                $timeSlotDropDowns.show();
+            }
+
+        });
+
+        $(".time-slot-drop-down").click(function () {
+            var selectedTime = $(this).text();
+            $(".selected-time-slot").text(selectedTime)
+                .data('shipping-method-capacity-id', $(this).data('shipping-method-capacity-id'))
+                .data('available-delivery-time-range-id', $(this).data('available-delivery-time-range-id'))
+                .data('shipping-method-id', $(this).data('shipping-method-id'));
+            $(".time-slot-drop-down").hide();
+            $(".delivery-date-dropdown").hide();
+            selectedTimeSlot = $(".selected-time-slot");
+            updateSelectedSlotData();
+
+        });
+
+        function updateSelectedSlotData() {
+            shippingMethodCapacityId = selectedTimeSlot.data('shipping-method-capacity-id');
+            availableDeliveryTimeRangeId = selectedTimeSlot.data('available-delivery-time-range-id');
+            shippingMethodId = selectedTimeSlot.data('shipping-method-id');
+        }
+
+    });
+
+</script>
+
+
