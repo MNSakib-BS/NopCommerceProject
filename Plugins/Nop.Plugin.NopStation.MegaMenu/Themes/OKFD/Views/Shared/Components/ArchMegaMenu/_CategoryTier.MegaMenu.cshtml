@@ -1,0 +1,19 @@
+﻿@model MegaMenuModel.CategoryLineModel
+
+<div class="sublist-toggle sublist-toggle-mega-menu"></div>
+<ul id="category-@Model.Category.Id" class="sub-menu">
+    @foreach (var subCategory in Model.Category.SubCategories)
+    {
+        <li>
+            <a href="@Url.RouteUrl("Category", new { SeName = subCategory.SeName })">
+                <span style="text-transform: uppercase;">@subCategory.Name</span>
+            </a>
+            @if (subCategory.SubCategories.Any())
+            {
+                var categoryLineModel = Model;
+                categoryLineModel.Category = subCategory;
+                @await Html.PartialAsync("_CategoryTier.MegaMenu.cshtml", categoryLineModel)
+            }
+        </li>
+    }
+</ul>

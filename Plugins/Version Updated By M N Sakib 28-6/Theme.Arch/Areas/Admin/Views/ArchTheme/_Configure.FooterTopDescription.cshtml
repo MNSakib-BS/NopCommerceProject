@@ -1,0 +1,328 @@
+﻿@model ConfigurationModel
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("Admin.NopStation.Theme.Arch.Configuration.PanelTitle.DescriptionBoxOne")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableDescriptionBoxOne_OverrideForStore" asp-input="EnableDescriptionBoxOne" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableDescriptionBoxOne" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableDescriptionBoxOne" />
+                </div>
+            </div>
+            @(Html.LocalizedEditor<ConfigurationModel, ConfigurationLocalizedModel>("Arch-localized-description-box-one",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxOneTitle_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxOneTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxOneTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxOneTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxOneText_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxOneText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxOneText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxOneText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+    ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxOneTitle_OverrideForStore" asp-input="DescriptionBoxOneTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxOneTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxOneTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxOneText_OverrideForStore" asp-input="DescriptionBoxOneText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxOneText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxOneText" />
+                    </div>
+                </div>
+            </div>
+            ))
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxOneUrl_OverrideForStore" asp-input="DescriptionBoxOneUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxOneUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxOneUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxOnePictureId_OverrideForStore" asp-input="DescriptionBoxOnePictureId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxOnePictureId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxOnePictureId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("Admin.NopStation.Theme.Arch.Configuration.PanelTitle.DescriptionBoxTwo")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableDescriptionBoxTwo_OverrideForStore" asp-input="EnableDescriptionBoxTwo" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableDescriptionBoxTwo" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableDescriptionBoxTwo" />
+                </div>
+            </div>
+
+            @(Html.LocalizedEditor<ConfigurationModel, ConfigurationLocalizedModel>("Arch-localized-description-box-two",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxTwoTitle_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxTwoTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxTwoTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxTwoTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxTwoText_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxTwoText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxTwoText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxTwoText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+            ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxTwoTitle_OverrideForStore" asp-input="DescriptionBoxTwoTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxTwoTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxTwoTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxTwoText_OverrideForStore" asp-input="DescriptionBoxTwoText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxTwoText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxTwoText" />
+                    </div>
+                </div>
+            </div>
+            ))
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxTwoUrl_OverrideForStore" asp-input="DescriptionBoxTwoUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxTwoUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxTwoUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxTwoPictureId_OverrideForStore" asp-input="DescriptionBoxTwoPictureId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxTwoPictureId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxTwoPictureId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("Admin.NopStation.Theme.Arch.Configuration.PanelTitle.DescriptionBoxThree")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableDescriptionBoxThree_OverrideForStore" asp-input="EnableDescriptionBoxThree" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableDescriptionBoxThree" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableDescriptionBoxThree" />
+                </div>
+            </div>
+
+            @(Html.LocalizedEditor<ConfigurationModel, ConfigurationLocalizedModel>("Arch-localized-description-box-three",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxThreeTitle_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxThreeTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxThreeTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxThreeTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxThreeText_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxThreeText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxThreeText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxThreeText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+            ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxThreeTitle_OverrideForStore" asp-input="DescriptionBoxThreeTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxThreeTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxThreeTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxThreeText_OverrideForStore" asp-input="DescriptionBoxThreeText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxThreeText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxThreeText" />
+                    </div>
+                </div>
+            </div>
+            ))
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxThreeUrl_OverrideForStore" asp-input="DescriptionBoxThreeUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxThreeUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxThreeUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxThreePictureId_OverrideForStore" asp-input="DescriptionBoxThreePictureId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxThreePictureId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxThreePictureId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @T("Admin.NopStation.Theme.Arch.Configuration.PanelTitle.DescriptionBoxFour")
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="EnableDescriptionBoxFour_OverrideForStore" asp-input="EnableDescriptionBoxFour" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="EnableDescriptionBoxFour" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="EnableDescriptionBoxFour" />
+                </div>
+            </div>
+
+            @(Html.LocalizedEditor<ConfigurationModel, ConfigurationLocalizedModel>("Arch-localized-description-box-three",
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxFourTitle_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxFourTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxFourTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxFourTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxFourText_OverrideForStore" asp-input="@Model.Locales[item].DescriptionBoxFourText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxFourText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="@Model.Locales[item].DescriptionBoxFourText" />
+                    </div>
+                </div>
+                 <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
+            </div>
+            ,
+            @<div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxFourTitle_OverrideForStore" asp-input="DescriptionBoxFourTitle" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxFourTitle" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxFourTitle" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="DescriptionBoxFourText_OverrideForStore" asp-input="DescriptionBoxFourText" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                        <nop-label asp-for="DescriptionBoxFourText" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="DescriptionBoxFourText" />
+                    </div>
+                </div>
+            </div>
+            ))
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxFourUrl_OverrideForStore" asp-input="DescriptionBoxFourUrl" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxFourUrl" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxFourUrl" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <nop-override-store-checkbox asp-for="DescriptionBoxFourPictureId_OverrideForStore" asp-input="DescriptionBoxFourPictureId" asp-store-scope="Model.ActiveStoreScopeConfiguration" />
+                    <nop-label asp-for="DescriptionBoxFourPictureId" />
+                </div>
+                <div class="col-md-9">
+                    <nop-editor asp-for="DescriptionBoxFourPictureId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "Group": "Misc",
+  "FriendlyName": "Arch Core",
+  "SystemName": "Arch.Core",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Arch Team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Arch.Core.dll",
+  "Description": "This plugin serves custom arch core management console"
+}

@@ -1,0 +1,70 @@
+﻿@using Nop.Arch.Models.AbandonedCartReminder
+@using Nop.Core.Domain.Catalog;
+@using Nop.Web.Framework.Models.DataTables;
+@using Nop.Web.Framework.UI;
+@using Nop.Web.Framework.Infrastructure;
+@using Nop.Web.Framework.Mvc.Razor;
+
+@model AbandonedCartReminderSearchModel
+@{
+    //page title
+    ViewBag.PageTitle = "Abandoned Cart Reminder";
+    Html.SetActiveMenuItemSystemName("AbandonedCartReminder");
+}
+
+<div class="content-header clearfix">
+    <h1 class="pull-left">
+        Store Types
+    </h1>
+    <div class="pull-right">
+        <a asp-action="Create" class="btn bg-blue">
+            <i class="fa fa-plus-square"></i>
+            Add New
+        </a>
+        @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.StoreListButtons })
+    </div>
+</div>
+
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @await Html.PartialAsync("Table",new DataTablesModel
+                    {
+                        Name = "abandonedcartreminder-grid",
+                        UrlRead = new DataUrl("FormList", "AbandonedCartReminder", null),
+                        Length = Model.PageSize,
+                        LengthMenu = Model.AvailablePageSizes,
+                        ColumnCollection = new List<ColumnProperty>
+                        {
+                            new ColumnProperty(nameof(AbandonedCartReminderGridModel.Description))
+                            {
+                                Title = T(AbandonedCartReminderGridModel.Field_Description).Text
+                            },
+                            new ColumnProperty(nameof(AbandonedCartReminderGridModel.DelayBeforeSend))
+                            {
+                                Title = T(AbandonedCartReminderGridModel.Field_DelayBeforeSend).Text
+                            },
+                            new ColumnProperty(nameof(AbandonedCartReminderGridModel.DelayPeriod))
+                            {
+                                Title = T(AbandonedCartReminderGridModel.Field_DelayPeriod).Text
+                            },
+                            new ColumnProperty(nameof(AbandonedCartReminderGridModel.Active))
+                            {
+                                Title = T(AbandonedCartReminderGridModel.Field_Active).Text
+                            },
+                            new ColumnProperty(nameof(AbandonedCartReminderModel.Id))
+                            {
+                                Title = T("Admin.Common.Edit").Text,
+                                Width = "100",
+                                ClassName =  NopColumnClassDefaults.Button,
+                                Render = new RenderButtonEdit(new DataUrl("Edit"))
+                            }
+                        }
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

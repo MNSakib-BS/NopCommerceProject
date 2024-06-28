@@ -1,0 +1,11 @@
+﻿{
+  "Group": "StoreType",
+  "FriendlyName": "Store Type",
+  "SystemName": "Arch.StoreType",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Spinnaker Software",
+  "DisplayOrder": 1,
+  "FileName": "Spinnaker.Plugin.Arch.Common.StoreType.dll",
+  "Description": ""
+}

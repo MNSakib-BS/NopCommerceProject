@@ -1,0 +1,58 @@
+﻿@using Nop.Core.Domain.Catalog;
+@using Nop.Web.Framework.Models.DataTables;
+@using Nop.Web.Framework.UI;
+@using Nop.Web.Framework.Infrastructure;
+@using Nop.Web.Framework.Mvc.Razor;
+@using Nop.Arch.Models.StoreType;
+
+@model StoreTypeSearchModel
+@{
+    //page title
+    ViewBag.PageTitle = "Store Type";
+    Html.SetActiveMenuItemSystemName("StoreType");
+}
+
+<div class="content-header clearfix">
+    <h1 class="pull-left">
+        Store Types
+    </h1>
+    <div class="pull-right">
+        <a asp-action="Create" class="btn bg-blue">
+            <i class="fa fa-plus-square"></i>
+            Add New
+        </a>
+        @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.StoreListButtons })
+    </div>
+</div>
+
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @await Html.PartialAsync("Table",new DataTablesModel
+                    {
+                    Name = "storetype-grid",
+                    UrlRead = new DataUrl("FormList", "StoreType", null),
+                    Length = Model.PageSize,
+                    LengthMenu = Model.AvailablePageSizes,
+                    ColumnCollection = new List<ColumnProperty>
+                    {
+                    new ColumnProperty(nameof(StoreTypeGridModel.Name))
+                    {
+                    Title = T(StoreTypeGridModel.Field_Name).Text
+                    },
+                    new ColumnProperty(nameof(StoreTypeModel.Id))
+                    {
+                    Title = T("Admin.Common.Edit").Text,
+                    Width = "100",
+                    ClassName =  NopColumnClassDefaults.Button,
+                    Render = new RenderButtonEdit(new DataUrl("Edit"))
+                    }
+                    }
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

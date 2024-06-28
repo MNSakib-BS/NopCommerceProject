@@ -1,0 +1,48 @@
+﻿@model MegaMenuModel.CategoryLineModel
+
+<li class="mm-nav-item no-sidebar @(Model.Category.SubCategories.Count > 0? "has-submenu" : "")">
+    <a class="mm-nav-link" href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName })">
+        @if (Model.Category.PictureModel != null)
+        {
+            <span class="mm-nav-img">
+                <img class="img-fluid" src="@Model.Category.PictureModel.ImageUrl" alt="@Model.Category.PictureModel.AlternateText" />
+            </span>
+        }
+        <span>@Model.Category.Name</span>
+        @if (Model.Category.NumberOfProducts.HasValue)
+        {
+            <span class="mm-nav-total">
+                @T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
+            </span>
+        }
+    </a>
+
+    @{
+        var levelClass = "";
+        if (Model.Level == 0)
+        {
+            levelClass = "first-level";
+        }
+        if (Model.Category.SubCategories.Count > 0 && Model.Level <= Model.MaxLevel)
+        {
+            <div class="sublist-toggle"></div>
+            <ul class="sublist @levelClass">
+                <li class="sublist-close-button">
+                    <button class="mm-back-button">
+                        <i class="icon-left-arrow"></i>  @T("Common.Back")
+                    </button>
+                </li>
+                @foreach (var subCategory in Model.Category.SubCategories)
+                {
+                    var categoryLineModel = new MegaMenuModel.CategoryLineModel
+                    {
+                        Category = subCategory,
+                        Level = Model.Level + 1,
+                        MaxLevel = Model.MaxLevel
+                    };
+                    @await Html.PartialAsync("_CategoryLine.MegaMenu.cshtml", categoryLineModel)
+                }
+            </ul>
+        }
+    }
+</li>

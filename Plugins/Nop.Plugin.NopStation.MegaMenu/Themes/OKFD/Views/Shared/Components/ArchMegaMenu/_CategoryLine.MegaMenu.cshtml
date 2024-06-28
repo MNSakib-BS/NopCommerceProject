@@ -1,0 +1,52 @@
+﻿@model MegaMenuModel.CategoryLineModel
+
+@{
+    var productCount = 1;
+    if (Model.Category.NumberOfProducts.HasValue)
+    {
+        productCount = Model.Category.NumberOfProducts.Value;
+    }
+}
+
+<ul class="mega-menu">
+    <li>
+        <a href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName})">
+            <span style="text-transform: uppercase;">@Model.Category.Name</span>
+        </a>
+
+        @if (Model.Category.SubCategories.Any())
+        {
+            @await Html.PartialAsync("_CategoryTier.MegaMenu.cshtml", Model)
+        }
+    </li>
+</ul>
+
+
+<script>
+    $(document).ready(function () {
+        $('.mega-menu > li').on('mouseenter', function () {
+            event.stopPropagation();
+            calculateColumnHeightForMegaMenu($(this));
+        });
+
+
+        $('.mega-menu > li > ul > li').on('mouseenter', function () {
+            event.stopPropagation();
+            calculateColumnHeightForMegaMenu($(this));
+        });
+    });
+
+    function calculateColumnHeightForMegaMenu(event) {
+        var navbarElement = $('.mm-navbar-nav');
+        var navbarHeight = navbarElement.height();
+        var navbarOffset = navbarElement.offset().top;
+
+        var $subMenus = $(event).find('ul');
+        var newPosition = navbarOffset - $(event).offset().top;
+
+        $subMenus.css({
+            'top': newPosition + 'px',
+            'height': navbarHeight + 'px'
+        });
+    }
+</script>

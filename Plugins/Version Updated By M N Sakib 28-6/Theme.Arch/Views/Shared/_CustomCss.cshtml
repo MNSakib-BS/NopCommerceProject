@@ -1,0 +1,25 @@
+﻿@using Nop.Core
+@using Nop.Core.Domain.Common
+@using Nop.Services.Configuration
+@using Nop.Web.Framework.Themes
+
+@inject IThemeContext themeContext
+@inject ISettingService settingService
+@inject IStoreContext storeContext
+@inject CommonSettings commonSettings
+
+@model string
+
+@{
+    Html.AddCssFileParts(Model);
+
+    if (commonSettings.EnableCssBundling)
+    {
+        var workingThemeName = themeContext.GetWorkingThemeNameAsync();
+        int fileVersion = settingService.GetSettingByKey($"{workingThemeName}themesettings.themeCustomCSSFileVersion", 0, storeContext.GetCurrentStoreAsync().Id);
+
+        var fakeCssFile = string.Format("/{0}.css", fileVersion.ToString());
+
+        Html.AddCssFileParts(fakeCssFile);
+    }
+}

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AssemblyInfoModel>
+
+@{
+    Layout = "_AdminLayout";
+
+    //page title
+    ViewBag.PageTitle = T("Admin.NopStation.Core.AssemblyInfo").Text;
+    //active menu item (system name)
+    NopHtml.SetActiveMenuItemSystemName("NopStationCore.AssemblyInfo");
+}
+
+<div class="content-header clearfix">
+    <h1 class="pull-left">
+        @T("Admin.NopStation.Core.AssemblyInfo")
+    </h1>
+</div>
+
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @foreach (var item in Model)
+                    {
+                    <span>@item.FileName @item.Version</span><br />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

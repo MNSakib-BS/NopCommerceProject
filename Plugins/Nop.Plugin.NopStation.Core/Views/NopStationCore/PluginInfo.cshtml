@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PluginInfoModel>
+
+@{
+    Layout = "_AdminLayout";
+
+    //page title
+    ViewBag.PageTitle = T("Admin.NopStation.Core.PluginInfo").Text;
+    //active menu item (system name)
+    NopHtml.SetActiveMenuItemSystemName("NopStationCore.PluginInfo");
+}
+
+<div class="content-header clearfix">
+    <h1 class="pull-left">
+        @T("Admin.NopStation.Core.PluginInfo")
+    </h1>
+</div>
+
+<div class="content">
+    <div class="form-horizontal">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    @foreach (var item in Model)
+                    {
+                        <span>@item.Name, Version=@(item.Version) (@item.FileName)</span><br />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
