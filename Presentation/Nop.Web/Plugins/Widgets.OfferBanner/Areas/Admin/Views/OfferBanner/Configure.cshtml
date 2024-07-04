@@ -1,0 +1,20 @@
+@model Nop.Plugin.Widget.OfferBanner.Models.ConfigurationModel
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form method="post" asp-area="Admin" asp-controller="OfferBanner" asp-action="Configure">
+    <div class="form-group row">
+        <div class="col-1">
+            <nop-label asp-for="Message" />
+        </div>
+        <div class="col">
+            <nop-editor asp-for="Message" />
+            <span asp-validation-for="Message"></span>
+        </div>
+        <div class="col-1">
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>

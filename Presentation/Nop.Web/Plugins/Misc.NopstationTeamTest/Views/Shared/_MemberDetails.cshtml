@@ -1,0 +1,51 @@
+﻿@model Nop.Plugin.Misc.NopstationTeamTest.Domain.Employee
+
+<div class="form-group row">
+    <div class="col-md-3">
+        <label asp-for="Name">Name</label>
+    </div>
+    <div class="col-md-9">
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-md-3">
+        <label asp-for="Designation">Designation</label>
+    </div>
+    <div class="col-md-9">
+        <select asp-for="Designation" class="form-control">
+            <option value="">Select Designation</option>
+            <option value="Project Manager">Project Manager</option>
+            <option value="Principal Engineer">Principal Engineer</option>
+            <option value="Lead Engineer">Lead Engineer</option>
+            <option value="Senior Software Engineer">Senior Software Engineer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Associate Software Engineer">Associate Software Engineer</option>
+            <option value="Senior SQA Engineer">Senior SQA Engineer</option>
+            <option value="SQA Engineer">SQA Engineer</option>
+            <option value="Associate SQA Engineer">Associate SQA Engineer</option>
+            <option value="Business Analyst">Business Analyst</option>
+            <option value="Senior Business Analyst">Senior Business Analyst</option>
+        </select>
+        <span asp-validation-for="Designation" class="text-danger"></span>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-md-3">
+        <label asp-for="IsMVP">Is MVP Certified</label>
+    </div>
+    <div class="col-md-9">
+        <input type="checkbox" asp-for="IsMVP" />
+        <span asp-validation-for="IsMVP" class="text-danger"></span>
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-md-3">
+        <label asp-for="IsNopCommerceCertified">Is NopCommerce Certified</label>
+    </div>
+    <div class="col-md-9">
+        <input type="checkbox" asp-for="IsNopCommerceCertified" />
+        <span asp-validation-for="IsNopCommerceCertified" class="text-danger"></span>
+    </div>
+</div>

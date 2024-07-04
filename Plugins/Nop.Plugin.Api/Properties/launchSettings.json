@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Nop.Plugin.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56676;https://localhost:44365;https://arch1.estore:56676"
+    }
+  }
+}

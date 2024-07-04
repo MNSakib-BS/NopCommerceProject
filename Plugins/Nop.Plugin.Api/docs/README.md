@@ -1,0 +1,70 @@
+# API plugin for nopCommerce 4.3
+
+This plugin provides a RESTful API for managing resources in nopCommerce.
+
+## What is a RESTful API?
+
+
+
+== Experiencing the following exception
+"System.ArgumentException: The 'AppId' option must be provided. (Parameter 'AppId')"?
+
+Navigate to the following section once logged in as an admin
+	http://localhost:55390/Admin/FacebookAuthentication/Configure
+
+Ensure the following are set to value (doesn't have to be legit, as long as the fields are populated with something)
+	- App ID/API Key
+	- App Secret
+
+== Get a token
+[GET] www.myStore.com/token
+
+Ensure the Customer is assigned the "ApiUserRole" role 
+
+Create role if it does not exist
+
+Set system name to ApiUserRole
+
+Set the Username and Password in the form-data fields of the request
+
+== Consume the API
+[GET] http://localhost:55390/api/categories
+
+Set the Authorization to Bearer Token and place the access_token from the token response as the value
+
+
+
+HTTP requests are often the way that you interact with a RESTful API.
+A client makes an HTTP request to a server and the server responds with an HTTP response.
+
+In a HTTP request, you need to define the type of action that you want to perform against a resource. There are four primary actions associated with any HTTP request (commonly referred to as CRUD):
+
+**POST** (Create)
+
+**GET** (Retrieve)
+
+**PUT** (Update)
+
+**DELETE** (Delete)
+
+A resource is a data object that can be accessed via an HTTP request. The API allows you to “access your nopCommerce site’s data (resources) through an easy-to-use HTTP REST API”. In the case of the most recent version of the API (nopCommerce version 4.30), the resources include the following 7 nopCommerce objects:
+
+[**Customers**](Customers.md)
+
+[**Products**](Products.md)
+
+[**Categories**](Categories.md)
+
+[**ProductCategoryMappings**](ProductCategoryMappings.md)
+
+[**Orders**](Orders.md)
+
+[**OrderItems**](OrderItems.md)
+
+[**ShoppingCartItems**](ShoppingCartItems.md)
+
+With the nopCommerce API, you can perform any of the four CRUD actions against any of your nopCommerce site’s resources listed above. For example, you can use the API to create a product, retrieve a product, update a product or delete a product associated with your nopCommerce website.
+
+## What about security?
+
+## The API plugin currently supports only JWT Bearer Authentication. Will add support of OAuth 2.0 Authorization Code grant type flow later.

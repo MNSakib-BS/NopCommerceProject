@@ -94,6 +94,10 @@
     {
       "SystemName": "Widget.OfferBanner",
       "Version": "1.0.0"
+    },
+    {
+      "SystemName": "NopStation.Core",
+      "Version": "4.70.1.0"
     }
   ],
   "PluginNamesToUninstall": [],

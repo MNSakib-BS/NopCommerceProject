@@ -402,7 +402,7 @@ public partial class CustomerWalletService : ICustomerWalletService
             }
 
             customerWalletTransaction.CashbackStatusId = (int)CashbackStatus.Claimed;
-            customerWalletTransaction.Description += $" / Cashback claimed by customer {_workContext.CurrentCustomer.Id}";
+            customerWalletTransaction.Description += $" / Cashback claimed by customer {_workContext.GetCurrentCustomerAsync().Id}";
             UpdateCustomerWalletTransaction(customerWalletTransaction);
 
             // create a new transaction to record the debiting of the wallet
@@ -410,7 +410,7 @@ public partial class CustomerWalletService : ICustomerWalletService
             {
                 Amount = customerWalletTransaction.Amount,
                 CustomerWalletId = customerWallet.Id,
-                Description = $"[{WalletTransactionType.Debit}] Cashback claimed by customer {_workContext.CurrentCustomer.Id}",
+                Description = $"[{WalletTransactionType.Debit}] Cashback claimed by customer {_workContext.GetCurrentCustomerAsync().Id}",
                 WalletTransactionTypeId = (int)WalletTransactionType.Debit,
                 TransactionTrackingNumber = customerWalletTransaction.TransactionTrackingNumber,
                 LimitedToStores = customerWalletTransaction.LimitedToStores,

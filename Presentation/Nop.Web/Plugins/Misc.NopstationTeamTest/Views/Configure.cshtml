@@ -1,0 +1,25 @@
+﻿@model Nop.Plugin.Misc.NopstationTeamTest.Domain.Employee
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="NopstationTeamTest" asp-action="Configure" method="post" enctype="multipart/form-data">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="cards-group">
+                <div class="card card-default">
+                    <div class="card-header font-weight-bold" style="font-size: large">
+                        Member details
+                    </div>
+                    <div class="card-body">
+                        @await Html.PartialAsync("~/Plugins/Misc.NopstationTeamTest/Views/Shared/_MemberDetails.cshtml", Model)
+                    </div>
+                    <div class="card-body">
+                        @await Html.PartialAsync("~/Plugins/Misc.NopstationTeamTest/Views/Shared/_SubmitButton.cshtml")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
